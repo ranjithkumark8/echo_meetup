@@ -1,10 +1,10 @@
-import logo from './logo.svg';
 import './App.css';
+import { EventPage } from './Components/Pages/MainPage/EventPage';
 
 function App() {
   return (
     <div className="App">
-      
+      <EventPage />
     </div>
   );
 }
