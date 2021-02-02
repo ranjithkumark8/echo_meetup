@@ -1,0 +1,25 @@
+.loginHeader__startAGroup{
+    color: #F64060 ;
+    font-weight: 600;
+    cursor: pointer;
+    font-size: 13px;
+}
+.loginHeader__login_text{
+    color: grey;
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: 400;
+}
+.LoginHeader_right{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-left: 50%;
+   
+    width: 50%;
+}
+.header{
+    display: flex;
+    padding :0px 20px 0px 10px;
+    border-bottom: 1px solid silver;
+}
