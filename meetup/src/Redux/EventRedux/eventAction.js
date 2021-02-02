@@ -11,7 +11,9 @@ const eventRequest = () => {
 const eventSuccess = (data) => {
     return {
         type: EVENT_SUCCESS,
-        data:data
+        payload: {
+            data
+        }
     }
 }
 
@@ -30,7 +32,7 @@ const eventFetch = () => (dispatch) => {
         .get("https://meetup-project.herokuapp.com/events")
         .then(res => {
             console.log("response data", res.data)
-            return dispatch(eventSuccess())
+            return dispatch(eventSuccess(res.data))
         })
         .catch((err) => dispatch(eventFailure(err)))
 }

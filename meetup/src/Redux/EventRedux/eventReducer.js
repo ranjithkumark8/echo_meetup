@@ -12,13 +12,15 @@ const initialData = {
 };
 
 const eventReducer = (state = initialData, { type, payload }) => {
+    
   switch (type) {
     case EVENT_REQUEST:
       return {
         ...state,
         isLoading: true,
       };
-    case EVENT_SUCCESS:
+      case EVENT_SUCCESS:
+          console.log(payload.data)
       return {
         ...state,
         eventData: payload.data,

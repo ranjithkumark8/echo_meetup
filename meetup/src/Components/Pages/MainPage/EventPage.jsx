@@ -8,8 +8,8 @@ const EventPage = () => {
     React.useEffect(() => {
         dispatch(eventFetch())
     }, [])
-    
-    const data = useSelector(state => state.data)
+
+    const data = useSelector(state => state.eventReducer.eventData)
     
     console.log(data)
     
