@@ -1,5 +1,6 @@
 
 import './App.css';
+import { MainPage } from './Components/Pages/MainPage/MainPage.jsx';
 import { EventCategories } from './Components/EventCategories';
 import { NavBar } from './Components/NavBar';
 import { EventPage } from './Components/Pages/MainPage/EventPage';
@@ -11,6 +12,7 @@ function App() {
     <div className="App">
       <NavBar />
       {/* <EventCategories /> */}
+    <MainPage />
       <EventPage />
       <Routes />
     <Footer/>
