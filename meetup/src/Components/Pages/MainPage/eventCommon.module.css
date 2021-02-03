@@ -1,0 +1,81 @@
+*{
+    font-family: "Graphik Meetup", "-apple-system, BlinkMacSystemFont", "Roboto", Helvetica, Arial, sans-serif;
+}
+
+.heading{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0px;
+    text-align: center;
+}
+
+.heading h1{
+    font-weight: 700;
+
+}
+
+.heading_allEvents{
+    line-height: 24px;
+    font-size: 1em;
+    color: #008294;
+    text-decoration: none;
+    padding-right: 5%;
+    padding-top: 1%;
+}
+.heading_allEvents:hover{
+    text-decoration: underline;
+}
+
+.event_card{
+    border: 1px solid #eee;
+    width: 90%;
+    height: 300px;
+    justify-content: space-between;
+    /* text-align: center; */
+    display: flex;
+    flex-direction: column;
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+.event_card:hover{
+    cursor: pointer;
+}
+.event_card_date{
+    font-size: 14px;
+    line-height: 22px;
+    color: #877457;
+    margin-bottom: 5px;
+}
+.event_card_header{
+    font-size: 16px;
+    color: #212121;
+    margin-bottom: 5px;
+}
+.event_card_subHeading{
+    font-size: 14px;
+    color: #757575;
+}
+.event_card_info{
+    padding: 5px;
+}
+.attendees_info{
+    display: flex;
+    padding: 0px 5px;
+}
+
+.attendees_info_mem{
+    flex-grow: 1;
+}
+.attendees_info_icons{
+    font-size: 22px;
+    color:rgb(128, 128, 128);
+}
+.attendees_info_icons_share:hover,
+.attendees_info_icons_star:hover{
+    color: rgb(199, 196, 196);
+}
+.attendees_info_icons_share,
+.attendees_info_icons_star{
+    padding-right: 5px;
+}
