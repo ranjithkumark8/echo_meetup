@@ -1,0 +1,15 @@
+.evetInfoDetails__details_container{
+    margin : 0% 14%;
+    padding : 2% 16px;
+    line-height: 28px;
+    background-color: whitesmoke;
+}
+p{
+    font-size: 16px;
+    margin-top: 20px;
+}
+ol{
+    font-size: 16px;
+    margin-top: 20px;
+    margin-left: 2%;
+}
