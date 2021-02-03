@@ -7,8 +7,8 @@ import { Link } from "react-router-dom"
 import { FiShare, FiStar } from "react-icons/fi"
 import { FaStar } from "react-icons/fa";
 
-const LearningEvents = ({ specificEvents}) => {
-    console.log(specificEvents)
+const LearningEvents = ({ specificEvents }) => {
+    // console.log(specificEvents)
 
     const responsive = {
         superLargeDesktop: {
@@ -33,12 +33,12 @@ const LearningEvents = ({ specificEvents}) => {
         <div style={{ margin: "auto", width: "70%" }}>
             <div className={styles.heading}>
                 <h1>Learn new skills</h1>
-                <Link to = {`/find?keyword=near_by`} className={styles.heading_allEvents}>See all</Link>
+                <Link to={`/find?keyword=near_by`} className={styles.heading_allEvents}>See all</Link>
             </div>
             <Carousel responsive={responsive} removeArrowOnDeviceType={["tablet", "mobile"]} >
                 {specificEvents.map((item) => (
                     <div key={item.id} className={styles.event_card}>
-                            <img src={item.img} alt={item.header} />
+                        <img src={item.img} alt={item.header} />
                         <div className={styles.event_card_info}>
                             <div className={styles.event_card_date}>{item.date}</div>
                             <div className={styles.event_card_header}>{item.header}</div>
@@ -47,8 +47,8 @@ const LearningEvents = ({ specificEvents}) => {
                         <div className={styles.attendees_info}>
                             {item.attendees.length > 0 ? <div className={styles.attendees_info_mem}>{item.attendees.length} going</div> : <div className={styles.attendees_info_mem}> </div>}
                             <div className={styles.attendees_info_icons}>
-                                <FiShare className={styles.attendees_info_icons_share}/>
-                                {item.isStar === "true" ? <FaStar style={{color:"tomato"}} className={styles.attendees_info_icons_star}></FaStar> : <FiStar className={styles.attendees_info_icons_star}></FiStar>}
+                                <FiShare className={styles.attendees_info_icons_share} />
+                                {item.isStar === "true" ? <FaStar style={{ color: "tomato" }} className={styles.attendees_info_icons_star}></FaStar> : <FiStar className={styles.attendees_info_icons_star}></FiStar>}
                                 {/* {item.style ? true : false} */}
                             </div>
                         </div>

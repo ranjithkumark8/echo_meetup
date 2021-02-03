@@ -9,7 +9,7 @@ import { OutdoorEvents } from "./OutdoorEvents"
 import { TechEvents } from "./TechEvents"
 const EventPage = (props) => {
 
-    console.log(props.event)
+    // console.log(props.event)
     const dispatch = useDispatch()
 
     React.useEffect(() => {
@@ -18,17 +18,17 @@ const EventPage = (props) => {
 
     // const data = useSelector(state => state.eventReducer.eventData)
     // console.log(data)
-    console.log("props", props.event)
+    // console.log("props", props.event)
     const specificEvents = useSelector(state => state.eventReducer.eventData.filter(item => {
         return item.category === props.event
     }))
     if (props.event === "near_by") {
-        console.log(specificEvents)
+        // console.log(specificEvents)
         return (
             <NearbyEvents specificEvents={specificEvents} />
         )
     } else if (props.event === "career & Business") {
-        console.log(specificEvents)
+        // console.log(specificEvents)
         return (
             <NetworkEvents specificEvents={specificEvents} />
         )

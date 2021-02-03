@@ -1,11 +1,11 @@
 .eventsContainer {
-    width: 100%;
-    margin: auto;
+    width: 70%;
+    margin: 100px auto;
 }
 
 .eventsContainer>h1 {
     font-size: 30px;
-    margin: 10px 0;
+    margin-bottom: 20px;
 }
 
 .eventsContainer__parentCard,

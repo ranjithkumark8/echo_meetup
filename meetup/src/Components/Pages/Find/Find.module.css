@@ -75,6 +75,11 @@
     width: 70%;
 }
 
+.findContainer__eventCard__parent__child__content>p {
+    margin: 10px 0;
+    color: rgb(119, 119, 119);
+}
+
 .findContainer__eventCard__parent__child__content__info {
     display: flex;
     justify-content: space-between;
@@ -84,7 +89,7 @@
 
 .findContainer__eventCard__parent__child__content__info>div:nth-of-type(1) {
     display: flex;
-    width: 100px;
+    width: 90px;
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
