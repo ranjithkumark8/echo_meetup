@@ -28,3 +28,31 @@
     height: 40px;
     text-align: center;
 }
+.eventInfo__navbar_modal{
+    padding: 20px 30px 30px 20px;
+  
+}
+.eventInfo__host_image{
+    height: 80px;
+    border-radius: 50%;
+    width: 80px;
+}
+.response_div{
+    border : 1px solid silver;
+    border-radius: 10px;
+    padding: 10px 30px 20px 10px ;
+    line-height: 28px;
+    margin-top: 50px  ;
+    width: 300px;
+    margin-left: 60px;
+    margin-bottom: 40px;
+}
+.addToCalenderDiv{
+    border : 1px solid #0098AB;
+    padding: 10px 20px;
+    border-radius: 8px;
+    width: 150px;
+    margin-left: 130px;
+    color : #0098AB;
+    margin-top: 30px;
+}

@@ -3,64 +3,77 @@ import {BsFillQuestionCircleFill } from "react-icons/bs";
 import Styles from './EventInfoSideBar.module.css'
 import { AiOutlineClockCircle } from "react-icons/ai";
 import { BiVideo } from "react-icons/bi";
+import { Calendar, Alert } from 'antd';
+import moment from 'moment';
 
 
 const EventInfoSideBar = () => {
-    let gapi = window.gapi
-    let CLIENT_ID = '1057056086972-bat9npn4nfr8qh676h3h9o97n1n9mv2s.apps.googleusercontent.com';
-    let API_KEY = 'AIzaSyBMIa0IyUB2gp4E7a3BZzgKLDoaagdit7Y';
-    let DISCOVERY_DOCS = ["https://www.googleapis.com/discovery/v1/apis/calendar/v3/rest"];
-    let SCOPES = "https://www.googleapis.com/auth/calendar";
+   
+    const [value , setValue] = React.useState(moment('2017-01-25'))
+    const [selectedValue , setselectedValue] = React.useState(moment('2017-01-25'))
+    // let gapi = window.gapi
+    // let CLIENT_ID = '1057056086972-bat9npn4nfr8qh676h3h9o97n1n9mv2s.apps.googleusercontent.com';
+    // let API_KEY = 'AIzaSyBMIa0IyUB2gp4E7a3BZzgKLDoaagdit7Y';
+    // let DISCOVERY_DOCS = ["https://www.googleapis.com/discovery/v1/apis/calendar/v3/rest"];
+    // let SCOPES = "https://www.googleapis.com/auth/calendar";
 
+    const onSelect = value => {
+        setValue(value)
+        setselectedValue(value)
+      };
+    
+      const onPanelChange = value => {
+        this.setState({ value });
+      };
     const handleClick = () =>{
-    gapi.load('client:auth2',() => {
-        gapi.client.init({
-            apiKey: API_KEY,
-            clientId: CLIENT_ID,
-            discoveryDocs: DISCOVERY_DOCS,
-            scope: SCOPES
-          })
-          gapi.client.load('calender' , 'v3' , () => console.log("calender"))
-          gapi.auth2.getAuthInstance().signIn()
-          .then(() =>{
-            var event = {
-                'summary': 'Google I/O 2015',
-                'location': '800 Howard St., San Francisco, CA 94103',
-                'description': 'A chance to hear more about Google\'s developer products.',
-                'start': {
-                  'dateTime': '2015-05-28T09:00:00-07:00',
-                  'timeZone': 'America/Los_Angeles'
-                },
-                'end': {
-                  'dateTime': '2015-05-28T17:00:00-07:00',
-                  'timeZone': 'America/Los_Angeles'
-                },
-                'recurrence': [
-                  'RRULE:FREQ=DAILY;COUNT=2'
-                ],
-                'attendees': [
-                  {'email': 'lpage@example.com'},
-                  {'email': 'sbrin@example.com'}
-                ],
-                'reminders': {
-                  'useDefault': false,
-                  'overrides': [
-                    {'method': 'email', 'minutes': 24 * 60},
-                    {'method': 'popup', 'minutes': 10}
-                  ]
-                }
-              };
-              var request = gapi.client.calendar.events.insert({
-                'calendarId': 'primary',
-                'resource': event
-              });
+    // gapi.load('client:auth2',() => {
+    //     gapi.client.init({
+    //         apiKey: API_KEY,
+    //         clientId: CLIENT_ID,
+    //         discoveryDocs: DISCOVERY_DOCS,
+    //         scope: SCOPES
+    //       })
+    //       gapi.client.load('calender' , 'v3' , () => console.log("calender"))
+    //       gapi.auth2.getAuthInstance().signIn()
+    //       .then(() =>{
+    //         var event = {
+    //             'summary': 'Google I/O 2015',
+    //             'location': '800 Howard St., San Francisco, CA 94103',
+    //             'description': 'A chance to hear more about Google\'s developer products.',
+    //             'start': {
+    //               'dateTime': '2015-05-28T09:00:00-07:00',
+    //               'timeZone': 'America/Los_Angeles'
+    //             },
+    //             'end': {
+    //               'dateTime': '2015-05-28T17:00:00-07:00',
+    //               'timeZone': 'America/Los_Angeles'
+    //             },
+    //             'recurrence': [
+    //               'RRULE:FREQ=DAILY;COUNT=2'
+    //             ],
+    //             'attendees': [
+    //               {'email': 'lpage@example.com'},
+    //               {'email': 'sbrin@example.com'}
+    //             ],
+    //             'reminders': {
+    //               'useDefault': false,
+    //               'overrides': [
+    //                 {'method': 'email', 'minutes': 24 * 60},
+    //                 {'method': 'popup', 'minutes': 10}
+    //               ]
+    //             }
+    //           };
+    //           var request = gapi.client.calendar.events.insert({
+    //             'calendarId': 'primary',
+    //             'resource': event
+    //           });
               
-              request.execute(event =>{
-                window.open(event.htmlLink);
-              });
+    //           request.execute(event =>{
+    //             window.open(event.htmlLink);
+    //           });
               
-          })
-    });
+    //       })
+    // });
 
     }
 
@@ -88,6 +101,8 @@ const EventInfoSideBar = () => {
                     <BiVideo style = {{color : "grey"}}/>
                     <p style = {{marginLeft : "10px"}}>Online event</p>
                 </div>
+               
+     
             </div>
         </div>
     )
