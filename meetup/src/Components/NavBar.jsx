@@ -11,7 +11,7 @@ export const NavBar = () => {
     const history = useHistory();
 
     const handleSearch = () => {
-        history.push(`/find/?keyword=${keyword}`);
+        history.push(`/find?keyword=${keyword}`);
     }
 
     return (
@@ -23,8 +23,8 @@ export const NavBar = () => {
                 <div className={styles.left__search}>
                     <input type="text" placeholder="Search for keywords" onChange={e => setKeyword(e.target.value)} />
                     <input type="text" placeholder="City or zip code" />
-                    <div>
-                        <BiSearch className={styles.left__search__button} onClick={handleSearch} />
+                    <div onClick={handleSearch}>
+                        <BiSearch className={styles.left__search__button} />
                     </div>
                 </div>
             </div>
