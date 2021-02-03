@@ -24,9 +24,10 @@ body{
     margin-left: 60%;
     margin-top: 60px;
     border-radius: 10px;
+    margin-bottom: 20px;
 }
 .eventInfo__hosting_header{
-    margin : 1% 15% ;
+    margin : 1% 15% 0% ;
     line-height: 28px;
  
 }

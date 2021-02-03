@@ -4,6 +4,10 @@ import { FiShare } from "react-icons/fi";
 import Styles from './EventInfo.module.css'
 import EvetInfoDetails from './EventInfoDetails/EvetInfoDetails';
 import { EventInfoAttendes } from './Event/EventinfoAttendes/EventInfoAttendes';
+import { EventInfoLikes } from './EventInfoLikes/EventInfoLikes';
+import { EventNavbar } from './EventNavabar/EventNavbar';
+import { EventInfoSideBar } from './EventInfoRightSideComponent/EventInfoSideBar';
+
 
 const EventInfo = () => {
     return (
@@ -34,8 +38,11 @@ const EventInfo = () => {
             <div style = {{backgroundColor : "whitesmoke" , margin : "0px" , padding : "0px"}}>
                 <EvetInfoDetails/>
                 <EventInfoAttendes/>
+                <EventInfoLikes/>
             </div>
-           
+            <div style = {{borderBottom : "1px solid silver"}}></div>
+           <EventNavbar/>
+           <EventInfoSideBar/>
         </div>
     )
 }
