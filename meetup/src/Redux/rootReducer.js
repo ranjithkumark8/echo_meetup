@@ -1,4 +1,16 @@
-import { combineReducers } from "redux"
-import { eventReducer } from "./EventRedux/eventReducer"
+import {
+    combineReducers
+} from "redux";
+import {
+    eventCategoriesReducer
+} from "./EventCategoriesRedux/eventCategoriesReducer";
+import {
+    eventReducer
+} from "./EventRedux/eventReducer"
 
-export const rootReducer = combineReducers({eventReducer:eventReducer})
+// this is common reducer
+
+export const rootReducer = combineReducers({
+    eventCategoriesReducer: eventCategoriesReducer,
+    eventReducer: eventReducer
+})
