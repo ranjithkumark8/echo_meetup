@@ -1,0 +1,19 @@
+.addEventLikes__Container{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin : 2% 40% 15% 0%;
+    
+}
+.addEventLikes__attendes_image{
+    height: 80px;
+    border-radius: 40px;
+    width: 80px;
+    margin-left: 5px;
+    margin-right: 40px;
+}
+textarea{
+    border-radius: 8px;
+    padding: 5px 10px ;
+    border : 1px solid silver
+}

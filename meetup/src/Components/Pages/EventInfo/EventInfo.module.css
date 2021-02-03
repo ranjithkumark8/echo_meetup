@@ -1,0 +1,45 @@
+body{
+    font-family: Graphik Meetup,-apple-system,BlinkMacSystemFont,Roboto,Helvetica,Arial,sans-serif;
+   
+}
+.eventInfo_underline{
+    height: 1px;
+    background-color: silver;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+.eventInfo__event_date{
+    font-weight: 400;
+    color: #757575;
+    font-size: 16px;
+}
+.eventInfo__hostingInfo{
+    display: flex;
+    line-height: 19px;
+}
+.eventInfo__shareDiv{
+    border : 1px solid silver;
+    padding : 10px;
+    color: #757575;
+    margin-left: 60%;
+    margin-top: 60px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+.eventInfo__hosting_header{
+    margin : 1% 15% 0% ;
+    line-height: 28px;
+    padding-top: 10px;
+   
+}
+.eventInfo__event_name{
+    font-size: 32px;
+    font-weight: bolder;
+    margin-bottom: 20px;
+}
+.eventInfo__hostingInfo_image{
+    height: 80px;
+    border-radius: 40px;
+    width: 80px;
+    margin-top: 30px;
+}

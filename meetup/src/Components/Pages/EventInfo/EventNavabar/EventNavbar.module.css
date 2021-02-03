@@ -1,0 +1,58 @@
+.eventInfo__navabar_container{
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+    display: flex;
+    background-color: white;
+    justify-content: space-around;
+    padding: 20px 20px;
+    flex-direction: row;
+    align-items: center;
+}
+.eventInfo__navbar_attend_online_button{
+    background-color: #F65858;
+    padding: 15px 30px ;
+    font-size: 16px;
+    line-height: 16px;
+    border-radius: 10px;
+    margin-left: 70px;
+    height: 50px;
+    color: white;
+    
+}
+.eventInfo__navbar_star_icon{
+    border : 1px solid silver;
+    padding: 10px 10px 10px 10px;
+    border-radius: 5px;
+    margin-left: 70px;
+    height: 40px;
+    text-align: center;
+}
+.eventInfo__navbar_modal{
+    padding: 20px 30px 30px 20px;
+  
+}
+.eventInfo__host_image{
+    height: 80px;
+    border-radius: 50%;
+    width: 80px;
+}
+.response_div{
+    border : 1px solid silver;
+    border-radius: 10px;
+    padding: 10px 30px 20px 10px ;
+    line-height: 28px;
+    margin-top: 50px  ;
+    width: 300px;
+    margin-left: 60px;
+    margin-bottom: 40px;
+}
+.addToCalenderDiv{
+    border : 1px solid #0098AB;
+    padding: 10px 20px;
+    border-radius: 8px;
+    width: 150px;
+    margin-left: 130px;
+    color : #0098AB;
+    margin-top: 30px;
+}

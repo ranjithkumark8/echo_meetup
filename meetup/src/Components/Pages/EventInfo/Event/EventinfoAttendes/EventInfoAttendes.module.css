@@ -1,0 +1,52 @@
+.eventInfoAttendes_container{
+    margin : 5% 40% 0% 15% ; 
+}
+
+.eventInfoAttendesCard{
+    text-align: center!important;
+    min-height: 100%;
+    min-width: 128px;
+    padding-left: 8px;
+    padding-right: 8px;
+    border: 1px solid rgba(46,62,72,.12);
+    border-radius: 8px;
+    box-sizing: border-box;
+    background: #fff;
+    position: static;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 30px;
+    line-height: 39px;
+    margin : 2% 2% ;
+    transition: height 2s, transform 2s;
+}
+.eventInfoAttendesCard:hover{
+    height: 200px;
+    transform: translateY(2px);
+    box-shadow: 20px 20px solid silver;
+}
+.eventInfoAttendes__header{
+    display: flex;
+    justify-content: space-between;
+}
+.eventInfoAttendesCard_Container{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-top: 5%;
+}
+.eventInfoAttendes__attendes_image{
+    height: 80px;
+    border-radius: 40px;
+    width: 80px;
+   
+}
+.ModalContainer{
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    line-height: 39px;
+    padding: 10px ;
+}

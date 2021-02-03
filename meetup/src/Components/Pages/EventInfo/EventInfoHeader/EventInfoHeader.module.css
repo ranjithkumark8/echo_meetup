@@ -1,0 +1,41 @@
+.EventInfoHeader__searchBar{
+    border : 1px solid silver;
+    padding : 10px;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    margin-left: 40px;
+    border-radius: 5px;
+}
+.eventInfoHeader__startAGroup{
+    color:#00a2c7 ;
+    font-weight: 600;
+    cursor: pointer;
+    font-size: 13px;
+}
+.eventInfoHeader__startAGroup{
+    font-weight: bolder;
+    margin-bottom: 8px;
+
+}
+.header{
+    padding : 10px 30px 20px 30px;
+    display: flex;
+    align-items: center;
+    background-color: white;
+    border-bottom: 1px solid silver;
+}
+.eventInfo_left{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+   
+    width: 50%;
+}
+.eventInfo_right{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-left: 30%;
+    width: 50%;
+}

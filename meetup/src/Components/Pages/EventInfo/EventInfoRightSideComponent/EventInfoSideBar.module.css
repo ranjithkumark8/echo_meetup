@@ -1,0 +1,21 @@
+.eventInfo__sidebar_upper_div{
+    background-color: white;
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: row;
+}
+.eventInfo__sidebar_lower_div{
+    background-color: white;
+    padding: 10px 20px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+   
+}
+.eventInfo__sidebar_container{
+    position: fixed;
+    top : 42%;
+    right: 9%;
+}
