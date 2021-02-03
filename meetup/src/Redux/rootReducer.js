@@ -1,4 +1,16 @@
-// this is common reducer
-// export const rootReducer = combineReducer({all reducer objects})
+import {
+    combineReducers
+} from "redux";
+import {
+    eventCategoriesReducer
+} from "./EventCategoriesRedux/eventCategoriesReducer";
+import {
+    eventReducer
+} from "./EventRedux/eventReducer"
 
-// const rootReducer = combineReducers({ });
+// this is common reducer
+
+export const rootReducer = combineReducers({
+    eventCategoriesReducer: eventCategoriesReducer,
+    eventReducer: eventReducer
+})
