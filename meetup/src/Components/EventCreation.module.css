@@ -1,0 +1,78 @@
+body {
+    font-family: 'Graphik Meetup',-apple-system,BlinkMacSystemFont,Roboto,Helvetica,Arial,sans-serif;
+}
+.eve1 {
+    text-align: center;
+}
+.eve1 h1 {
+    font-size: 56px;
+    line-height: 1.24;
+    margin: 18px;
+    color: rgb(0, 0, 0);
+    font-weight: 850;
+}
+.eve1 h5 {
+    color:  gray;
+    padding: 10px;
+    font-weight: 100;
+}
+
+.eve1 h4 {
+    color: #333;
+    font-weight: 50;
+    margin-top: 30px ;
+}
+
+.eve1 span {
+    color: rgb(0, 130, 148);
+    font-size: small;
+}
+
+.eve1 h2 {
+    color: rgb(15, 15, 15);
+    margin-top: 70px;
+    font-size: xx-large;
+}
+.eve1_button , .eve2_button{
+    margin: 0px 50px 30px 0px;
+}
+.eve1_button button , .eve2_button button {
+    float: right;
+    margin-top: 120px;
+    width: 150px;
+    height: 40px;
+    border-radius: 5px;
+    border: 0px;
+    color: white;
+    background-color: rgb(246, 88, 88);
+}
+
+.eve2 {
+    width: 600px;
+    margin : 30px auto ;
+    height: 200px;
+}
+.eve2 > div >button {
+    margin: 30px 20px;
+    width: 150px;
+    height: 40px;
+    border: 1px solid rgb(0, 130, 148);
+    border-radius: 5px;
+}
+.eve2 > div  >button:hover {
+    background-color: rgb(0, 130, 148);
+}
+.eve2_button button {
+    margin-top: 10px;
+}
+.eve2_button :any-link , .eve1_button :any-link{
+    text-decoration: none;
+    color: white;
+    font-size: large;
+}
+.eve3_list {
+    text-align: left;
+    width: 600px;
+    margin: 30px auto;
+    font-size: larger;
+}
