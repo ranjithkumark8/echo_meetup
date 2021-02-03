@@ -1,4 +1,8 @@
-import { EVENT_FAILURE, EVENT_REQUEST, EVENT_SUCCESS } from "./eventActionTypes"
+import {
+    EVENT_FAILURE,
+    EVENT_REQUEST,
+    EVENT_SUCCESS
+} from "./eventActionTypes"
 
 import axios from "axios"
 
@@ -21,7 +25,7 @@ const eventFailure = (error) => {
     return {
         type: EVENT_FAILURE,
         payload: {
-            error:error
+            error: error
         }
     }
 }
@@ -31,12 +35,12 @@ const eventFetch = () => (dispatch) => {
     return axios
         .get("https://meetup-project.herokuapp.com/events")
         .then(res => {
-            console.log("response data", res.data)
+            // console.log("response data", res.data)
             return dispatch(eventSuccess(res.data))
         })
         .catch((err) => dispatch(eventFailure(err)))
 }
 
-export {eventFetch}
-
-
+export {
+    eventFetch
+}

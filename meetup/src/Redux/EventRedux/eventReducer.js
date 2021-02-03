@@ -11,16 +11,19 @@ const initialData = {
   error: "",
 };
 
-const eventReducer = (state = initialData, { type, payload }) => {
-    
+const eventReducer = (state = initialData, {
+  type,
+  payload
+}) => {
+
   switch (type) {
     case EVENT_REQUEST:
       return {
         ...state,
         isLoading: true,
       };
-      case EVENT_SUCCESS:
-          console.log(payload.data)
+    case EVENT_SUCCESS:
+      // console.log(payload.data)
       return {
         ...state,
         eventData: payload.data,
@@ -29,11 +32,13 @@ const eventReducer = (state = initialData, { type, payload }) => {
       return {
         ...state,
         isError: true,
-        error: payload.error,
+          error: payload.error,
       };
     default:
       return state;
   }
 };
 
-export { eventReducer };
+export {
+  eventReducer
+};

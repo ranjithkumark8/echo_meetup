@@ -1,33 +1,48 @@
 import React from "react";
 import { Route, Switch } from "react-router-dom";
-import { NavBar } from "../Components/NavBar";
+import { EventC1 } from "../Components/Pages/EventCreation/EventC1";
 import { EventC2 } from "../Components/Pages/EventCreation/EventC2";
 import { EventC3 } from "../Components/Pages/EventCreation/EventC3";
 import { EventC4 } from "../Components/Pages/EventCreation/EventC4";
 import { EventC5 } from "../Components/Pages/EventCreation/EventC5";
 import { Find } from "../Components/Pages/Find/Find";
+import { LandingPage } from "../Components/Pages/LandingPage/LandingPage";
+import { Login } from "../Components/Pages/Login/Login";
+import { MainPage } from "../Components/Pages/MainPage/MainPage";
+import { Signup } from "../Components/Pages/SignUp/Signup";
 
 
 export const Routes = () => {
     return (
         <Switch>
-            <Route path="/" exact>Landing Page</Route>
+            <Route path="/" exact>
+                <LandingPage />
+            </Route>
+            <Route path="/home" exact>
+                <MainPage />
+            </Route>
             <Route path="/find" >
                 <Find />
             </Route>
-            {/* <Route exact path="/" >
-            <EventC1/>
-          </Route> */}
-            <Route exact path="/eventC2">
+            <Route path="/login">
+                <Login />
+            </Route>
+            <Route path="/register">
+                <Signup />
+            </Route>
+            <Route exact path="/start/location" >
+                <EventC1 />
+            </Route>
+            <Route exact path="/start/topics">
                 <EventC2 />
             </Route>
-            <Route exact path="/eventC3">
+            <Route exact path="/start/name">
                 <EventC3 />
             </Route>
-            <Route exact path="/eventC4">
+            <Route exact path="/start/description">
                 <EventC4 />
             </Route>
-            <Route exact path="/eventC5">
+            <Route exact path="/start/guidlines">
                 <EventC5 />
             </Route>
             <Route exact path="/login">
