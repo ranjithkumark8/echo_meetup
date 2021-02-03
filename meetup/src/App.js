@@ -1,10 +1,10 @@
 import './App.css';
-import { EventPage } from './Components/Pages/MainPage/EventPage';
+import { MainPage } from './Components/Pages/MainPage/MainPage.jsx';
 
 function App() {
   return (
     <div className="App">
-      <EventPage />
+      <MainPage />
     </div>
   );
 }
