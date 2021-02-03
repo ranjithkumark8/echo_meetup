@@ -1,0 +1,58 @@
+.footer {
+    background-color: rgb(53, 62, 72);
+    height: 550px;
+    font-family: "Graphik Meetup", -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif;
+    color : rgb(255, 255, 255);
+}
+.footer_box {
+    padding: 40px;
+    width: 75%; 
+    margin: auto;
+}
+
+.footer_left {
+    display: flex;
+}
+.footer_right , .footer_left {
+    height: 344px;
+    font-size: 16px ;
+    line-height: 45px;
+}
+.footer_right  span {
+    margin-right: 30px;
+}
+.footer_left>div {
+    width: 220px;
+    height: 220px;
+}
+.footer_box ul {
+    list-style-type: none;
+}
+.footer_left :any-link {
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration: none;
+}
+
+.footer_right img {
+    width: 160px;
+    margin-top: 20px;
+}
+
+/* .footer_right>div {
+    display: flex;
+}  */
+.footer_right>div>div {
+    margin : 5px
+}
+
+.footer_bottom {
+    background-color: #0f1721;
+    height: 120px;
+
+}
+.footer_bottom > div {
+    padding: 20px 50px;
+}
+.clear {
+    clear: both;
+}
