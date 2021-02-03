@@ -36,6 +36,7 @@
     flex-direction: column;
     border-radius: 3px;
     overflow: hidden;
+    position: relative;
 }
 
 .event_card:hover{
@@ -78,4 +79,37 @@
 .attendees_info_icons_share,
 .attendees_info_icons_star{
     padding-right: 5px;
+}
+
+.model_close{
+    cursor: pointer;
+    font-size: 30px;
+}
+.model_header{
+    text-align: center;
+    margin-bottom: 20px;
+}
+.model_socialLinks{
+    padding: 10px;
+    font-size: 18px;
+    color: #008294;
+    cursor: pointer;
+}
+.model_socialLinks span{
+    color: grey;
+    padding: 0px 10px;
+}
+
+.event_card_online{
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    z-index: 100;
+    font-size: 14px;
+    background-color: white;
+    width: fit-content;
+    border: 1px solid #fefefe;
+    padding: 0px 2px;
+    border-radius: 4px;
+    font-weight: 600;
 }
