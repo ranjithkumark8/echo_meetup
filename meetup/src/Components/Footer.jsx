@@ -1,6 +1,6 @@
 import React from "react"
 import {Link} from "react-router-dom"
-import styles from "../footer.module.css"
+import styles from "./Footer.module.css"
 import { FaInstagram , FaTwitterSquare , FaFacebookSquare , FaYoutube} from 'react-icons/fa';
 import {BiCopyright} from "react-icons/bi"
 
