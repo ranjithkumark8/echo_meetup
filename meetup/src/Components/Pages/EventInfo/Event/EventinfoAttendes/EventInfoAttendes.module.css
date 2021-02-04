@@ -23,9 +23,8 @@
     transition: height 2s, transform 2s;
 }
 .eventInfoAttendesCard:hover{
-    height: 200px;
-    transform: translateY(2px);
-    box-shadow: 20px 20px solid silver;
+    box-shadow: 0 0 4px 0 rgb(46 62 72 / 12%), 0 4px 12px 0 rgb(46 62 72 / 12%);
+    transform: translateY(-1px) ;
 }
 .eventInfoAttendes__header{
     display: flex;
@@ -49,4 +48,11 @@
     flex-direction: column;
     line-height: 39px;
     padding: 10px ;
+}
+@media only screen and (max-width: 600px){
+    .eventInfoAttendes__header{
+        flex-direction: column;
+        background-color: whitesmoke;
+        margin : 5% 55% 5% 2% ; 
+    }
 }

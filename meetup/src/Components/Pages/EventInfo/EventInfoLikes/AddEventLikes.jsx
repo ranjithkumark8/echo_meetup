@@ -18,17 +18,19 @@ const AddEventLikes = () => {
             name,
             comment :comment 
         }
-       dispatch(putCommentsData(eventInfoData.id,particularComment))
+        console.log(eventInfoData.comments)
+        let comments = [particularComment ,...eventInfoData.comments]
 
+     dispatch(putCommentsData(eventInfoData.id,comments))
+     setComment("")
     }
     return (
         <>
         
         <div className = {Styles.addEventLikes__Container}>
-
-            <img className = {Styles.addEventLikes__attendes_image} src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRjvS45-B5Lc1KFMb-d914IuNypar6wp-H1Q&usqp=CAU" alt = "hoster"/>
-            <textarea placeholder = "add your comment" cols = "100" onChange = {(e) => setComment(e.target.value)}/>
-            <MdSend onClick = {handleClick} style ={{marginLeft : "30px" , fontSize : "30px",color : "grey"}}/>
+    <img className = {Styles.addEventLikes__attendes_image} src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQoP-psXAgWJMmi1nSIcNhatyx9cTQ35OZuZdeIAxcaYcIc67zilptMKg8u9eHLAu_fIGDuBA&usqp=CAU&ec=45771803" alt = "hoster"/>
+            <textarea placeholder = "add your comment" cols = "100" value = {comment} onChange = {(e) => setComment(e.target.value)}/>
+            <MdSend className = {Styles.send_icon} onClick = {handleClick} />
         </div>
         </>
     )

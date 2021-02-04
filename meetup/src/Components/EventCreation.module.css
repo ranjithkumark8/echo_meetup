@@ -38,7 +38,7 @@ body {
 }
 .eve1_button button , .eve2_button button {
     float: right;
-    margin-top: 120px;
+    margin-top: 50px;
     width: 150px;
     height: 40px;
     border-radius: 5px;
