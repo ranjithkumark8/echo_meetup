@@ -16,8 +16,9 @@ const EventInfoHeader = () => {
                 
                 <div className = {Styles.eventInfo_right}>
                     <div className = {Styles.eventInfoHeader__startAGroup}>Start a new group</div>
-                    <div style = {{color : "grey"}}>Log in</div>
-                    <div style = {{color : "grey"}}>Sign up</div>
+                    <div style = {{color : "grey"}}>Explore</div>
+                    <div style = {{color : "grey"}}>Message</div>
+                    <div style = {{color : "grey"}}>Notification</div>
                 </div>
             </div>
         </div>

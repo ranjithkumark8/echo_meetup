@@ -1,10 +1,12 @@
 import React from 'react'
 import Styles from './EventInfoDetails.module.css'
 
-const EvetInfoDetails = () => {
+const EvetInfoDetails = ({img}) => {
     return (
         <div className = {Styles.evetInfoDetails__details_container}>
-            <span style = {{fontSize : "20px", marginTop : "20px",fontWeight : 'bold'}}>Details</span>
+            <img src = {img} alt = {img} height = "300px" width = "450px"style = {{borderRadius : "10px"}}/>
+            <br/>
+            <h3 style = {{fontSize : "20px", marginTop : "70px",fontWeight : 'bold'}}>Details</h3>
             <p>Hello all Airflow-lovers in Bangalore/India.</p>
             <p>It's been almost a year since we hosted our first Apache Airflow meetup in <br/> Bangalore. It was quite a day to see so many energetic faces and 4 great talks <br/> on Airflow.</p>
             <p style = {{marginBottom : "20px"}}>Given the pandemic situation, we would be going fully virtual this time.<br/> Unfortunately, we gonna miss the physical presence, lunch, and swags but a<br/> large number of attendees should be able to square that feeling off.</p>

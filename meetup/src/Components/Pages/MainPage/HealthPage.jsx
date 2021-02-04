@@ -10,7 +10,7 @@ import { GrFormClose } from "react-icons/gr";
 import { IoIosVideocam } from "react-icons/io"
 
 const HealthEvents = ({ specificEvents }) => {
-    console.log(specificEvents)
+    //console.log(specificEvents)
     const [isModelOpen, setIsModelOpen] = React.useState(false)
     const [copied, setCopied] = React.useState(false)
     const history = useHistory();
@@ -48,7 +48,7 @@ const HealthEvents = ({ specificEvents }) => {
     const handleClick =(id) => {
         history.push(`/event/${id}`)
     }
-    
+
     return (
         <div style={{ margin: "auto", width: "70%" }}>
             <div className={styles.heading}>

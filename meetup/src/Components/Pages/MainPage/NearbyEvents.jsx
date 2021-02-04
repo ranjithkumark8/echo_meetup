@@ -2,7 +2,7 @@ import React from "react"
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 import styles from "./eventCommon.module.css"
-import { Link } from "react-router-dom"
+import { Link, useHistory } from "react-router-dom"
 import { FiShare, FiStar } from "react-icons/fi"
 import { FaStar, FaFacebook, FaTwitter, FaLinkedin, FaCopy } from "react-icons/fa";
 import Modal from "react-modal"
@@ -12,7 +12,8 @@ import { IoIosVideocam } from "react-icons/io"
 const NearbyEvents = ({ specificEvents }) => {
     const [isModelOpen, setIsModelOpen] = React.useState(false)
     const [copied, setCopied] = React.useState(false)
-
+    const history = useHistory();
+    
     const responsive = {
         superLargeDesktop: {
             // the naming can be any, depends on you.
@@ -42,7 +43,9 @@ const NearbyEvents = ({ specificEvents }) => {
     const handleModelCopy = () => {
         setCopied(true)
     }
-
+    const handleClick =(id) => {
+        history.push(`/event/${id}`)
+    }
     return (
         <div style={{ margin: "auto", width: "70%" }}>
             <div className={styles.heading}>
@@ -53,7 +56,7 @@ const NearbyEvents = ({ specificEvents }) => {
                 {specificEvents.map((item) => (
                     <div key={item.id} className={styles.event_card}>
                         {item.is_online_event && <div className={styles.event_card_online}><IoIosVideocam /> Online event</div>}
-                        <img src={item.img} alt={item.header} />
+                        <img src={item.img} alt={item.header}onClick = {() =>handleClick(item.id)} />
                         <div className={styles.event_card_info}>
                             <div className={styles.event_card_date}>{item.date}</div>
                             <div className={styles.event_card_header}>{item.header}</div>

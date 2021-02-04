@@ -60,8 +60,10 @@ const eventCommentsPutFailure = (err)=>{
 }
 const putAttendeeData = (id ,attendees) => dispatch =>{
     dispatch(eventAttendeePutRequest());
-    return axios.patch(`https://meetup-project.herokuapp.com/events/${id}`,{
-        attendees: attendees})
+    return axios.patch(`https://meetup-project.herokuapp.com/events/${id}`,
+    {
+        attendees : attendees}
+         )
     .then(res => {
         dispatch(eventAttendeePutSuccess())
        dispatch(getEventInfoData(id))
@@ -71,10 +73,10 @@ const putAttendeeData = (id ,attendees) => dispatch =>{
         dispatch(eventAttendeePutFailure(err))
     })
 }
-const putCommentsData = (id ,particularComment) => dispatch =>{
+const putCommentsData = (id ,comments) => dispatch =>{
     dispatch(eventCommentsPutRequest());
     return axios.patch(`https://meetup-project.herokuapp.com/events/${id}`,{
-        comments:particularComment})
+        comments : comments})
     .then(res => {
         dispatch(eventCommentsPutSuccess())
        dispatch(getEventInfoData(id))
