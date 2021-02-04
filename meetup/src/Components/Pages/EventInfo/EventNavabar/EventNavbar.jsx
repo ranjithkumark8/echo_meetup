@@ -4,10 +4,25 @@ import { AiOutlineStar } from "react-icons/ai";
 import { Modal, Button } from 'antd';
 import {AiFillCheckCircle } from "react-icons/ai";
 import { FaFacebookSquare,FaTwitter,FaLinkedin} from "react-icons/fa";
+import { useDispatch } from 'react-redux';
+import { putAttendeeData } from '../../../../Redux/EventInformationRedux/action';
 
-const EventNavbar = () => {
+const EventNavbar = ({id ,attendees}) => {
     const [modalVisible , setModalVisible] = React.useState(false)
-   
+    const dispatch = useDispatch();
+    const handleClick = () => {
+        setModalVisible(true)
+        
+        const signUp = JSON.parse(localStorage.getItem("signUpInfo"))
+        const {name} = signUp[signUp.length -1]
+       
+        const attendeeData = {
+            name,
+        }
+        attendees = [...attendees,attendeeData]
+        dispatch(putAttendeeData(id,attendees))
+            
+    }
 
     
     return (
@@ -21,7 +36,7 @@ const EventNavbar = () => {
                 <div className = {Styles.eventInfo__navbar_star_icon}>
                     <AiOutlineStar style = {{fontSize : "20px",color : "grey" }}/>
                 </div>
-                <Button className = {Styles.eventInfo__navbar_attend_online_button} onClick={() => setModalVisible(true)}>
+                <Button className = {Styles.eventInfo__navbar_attend_online_button} onClick={handleClick}>
                     Attend Online
                 </Button>
                 <Modal className = {Styles.eventInfo__navbar_modal}
