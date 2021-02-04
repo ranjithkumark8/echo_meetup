@@ -11,10 +11,11 @@ import { IoIosVideocam } from "react-icons/io"
 import { useDispatch } from "react-redux";
 import { eventFetch, favoriteEventUpdate } from "../../../Redux/EventRedux/eventAction";
 
-const NearbyEvents = ({ specificEvents }) => {
+const SavedEvents = ({specificEvents}) => {
     const [isModelOpen, setIsModelOpen] = React.useState(false)
     const [copied, setCopied] = React.useState(false)
     const dispatch = useDispatch()
+    // console.log(specificEvents, "saved events ")
     const responsive = {
         superLargeDesktop: {
             // the naming can be any, depends on you.
@@ -47,14 +48,14 @@ const NearbyEvents = ({ specificEvents }) => {
     const handleSaved = (id, isStar) => {
         console.log(id, isStar)
         dispatch(favoriteEventUpdate(id, isStar = !isStar))
-        dispatch(eventFetch())
+        // dispatch(eventFetch())
     }
 
     return (
         <div style={{ margin: "auto", width: "70%" }}>
             <div className={styles.heading}>
-                <h1>Events near Bangalore, IN</h1>
-                <Link to={`/find?keyword=near_by`} className={styles.heading_allEvents}>See all</Link>
+                <h1>Saved Events</h1>
+                {/* <Link to={`/find?keyword=near_by`} className={styles.heading_allEvents}>See all</Link> */}
             </div>
             <Carousel responsive={responsive} removeArrowOnDeviceType={["tablet", "mobile"]} >
                 {specificEvents.map((item) => (
@@ -136,4 +137,5 @@ const NearbyEvents = ({ specificEvents }) => {
         </div>
     )
 }
-export { NearbyEvents }
+
+export {SavedEvents}

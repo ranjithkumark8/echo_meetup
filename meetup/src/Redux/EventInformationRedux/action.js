@@ -58,7 +58,7 @@ const eventCommentsPutFailure = (err)=>{
         }
     }
 }
-const putAttendeeData = (id ,attendees) => dispatch =>{
+const putAttendeeData = (id, attendees) => dispatch =>{
     dispatch(eventAttendeePutRequest());
     return axios.patch(`https://meetup-project.herokuapp.com/events/${id}`,{
         attendees: attendees})
