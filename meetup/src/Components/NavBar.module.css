@@ -66,6 +66,7 @@ nav {
     color: #339BA9;
     font-weight: 500;
     cursor: pointer;
+    margin-bottom: 0;
 }
 
 .actions__icon {
