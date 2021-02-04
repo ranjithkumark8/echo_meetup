@@ -1,13 +1,11 @@
 
 import './App.css';
-import { Footer } from './Components/Footer';
-import { LandingPage } from './Components/Pages/LandingPage/LandingPage';
+import { Routes } from './Components/Pages/EventCreation/Routes';
 
 function App() {
   return (
     <div className="App">
-      <LandingPage/>
-      {/* <Footer/> */}
+      <Routes />
     </div>
   );
 }

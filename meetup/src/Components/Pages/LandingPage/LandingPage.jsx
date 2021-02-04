@@ -34,11 +34,8 @@ const LandingPage = () => {
                     <div style ={{margin:"3px 8px"}}><TiLocation style={{height:"1.6em" ,width:"1.4em"}}/></div>
                     <div style={{padding:"7px"}}>Banglore , In</div></div>
                 <div><button>Search</button></div>
-
             </div>
-
         </div>
-
     )
 }
 
