@@ -13,3 +13,12 @@ ol{
     margin-top: 20px;
     margin-left: 2%;
 }
+@media only screen and (max-width: 600px){
+    .event_image{
+        width: 200px;
+        height: 100px;
+    }
+    .evetInfoDetails__details_container{
+        margin : 0% 7%;
+    }
+}
