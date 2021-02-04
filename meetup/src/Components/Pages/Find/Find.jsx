@@ -1,28 +1,35 @@
 import React, { useEffect, useState } from "react";
-import { useSelector } from "react-redux";
-import { useHistory, useLocation } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import { Redirect, useHistory, useLocation } from "react-router-dom";
 import { EventCategories } from "../../EventCategories";
 import { NavBar } from "../../NavBar";
 import { BsFillCameraVideoFill, BsStar, BsStarFill } from 'react-icons/bs';
 import { FiShare } from 'react-icons/fi';
+import { IoIosArrowDown } from 'react-icons/io';
 import styles from "./Find.module.css";
+import { eventFetch } from "../../../Redux/EventRedux/eventAction";
 
 
 export const Find = () => {
     const location = useLocation();
     let params = new URLSearchParams(location.search);
+    console.log(params.get("keyword"))
     const category = params.get("keyword");
     const dateRange = params.get("dateRange");
     const eventType = params.get("eventType");
     const history = useHistory();
-    const [url, setUrl] = useState("");
-    // console.log(location.search, params, dateRange, eventType)
+    const [url, setUrl] = useState(location.pathname + location.search);
+    const isLoggedin = useSelector(state => state.authReducer.isLoggedin);
+    const dispatch = useDispatch();
+    console.log(location.search, params, dateRange, eventType)
     // console.log(location, params)
 
-
+    const temp = useSelector(state => state.eventReducer.eventData)
     const eventData = useSelector(state => state.eventReducer.eventData).filter(item => {
-        return item.category.toLowerCase().includes(category);
+        console.log(item.category.toLowerCase().includes(category), category)
+        return item.category.toLowerCase().includes(category.toLowerCase());
     });
+    console.log(eventData, temp)
     const [filteredData, setFilteredData] = useState(eventData);
     let newData = [];
 
@@ -92,25 +99,42 @@ export const Find = () => {
 
     useEffect(() => {
         handleFilterData();
+        console.log(url)
     }, [url])
+    console.log(url)
+
+    // useEffect(() => {
+    //     dispatch(eventFetch());
+    // }, [])
+
+
+    if (!isLoggedin) {
+        return <Redirect to="/login" />
+    }
 
     return (
         <>
             <NavBar />
             <section className={styles.findContainer}>
                 <div className={styles.findContainer__filters}>
-                    <select className={styles.findContainer__filters__select} name="dateRange" id="day" onChange={handleFilter}>
-                        <option value="Any day">Any day</option>
-                        <option value="Today">Today</option>
-                        <option value="Tomorrow">Tomorrow</option>
-                        <option value="This week">This week</option>
-                        <option value="Next week">Next week</option>
-                    </select>
-                    <select className={styles.findContainer__filters__select} name="eventType" id="type" onChange={handleFilter}>
-                        <option value="Any type">Any type</option>
-                        <option value="Online">Online</option>
-                        <option value="In person">In person</option>
-                    </select>
+                    <div>
+                        <select className={styles.findContainer__filters__select} name="dateRange" id="day" onChange={handleFilter}>
+                            <option value="Any day">Any day</option>
+                            <option value="Today">Today</option>
+                            <option value="Tomorrow">Tomorrow</option>
+                            <option value="This week">This week</option>
+                            <option value="Next week">Next week</option>
+                        </select>
+                        <IoIosArrowDown className={styles.findContainer__filters__select__arrow} />
+                    </div>
+                    <div>
+                        <select className={styles.findContainer__filters__select} name="eventType" id="type" onChange={handleFilter}>
+                            <option value="Any type">Any type</option>
+                            <option value="Online">Online</option>
+                            <option value="In person">In person</option>
+                        </select>
+                        <IoIosArrowDown className={styles.findContainer__filters__select__arrow} />
+                    </div>
                     {(dateRange !== null || eventData !== null) && <p onClick={handleResetFilter}>Reset filters</p>}
                 </div>
                 <hr />
@@ -134,7 +158,7 @@ export const Find = () => {
                                                 </div>
                                                 <div>
                                                     <FiShare />
-                                                    {item.isStar ? <BsStarFill className={styles.star} /> : <BsStar />}
+                                                    {item.isStar ? <BsStarFill style={{ marginLeft: 15 }} className={styles.star} /> : <BsStar style={{ marginLeft: 15 }} />}
                                                 </div>
                                             </div>
                                         </div>
