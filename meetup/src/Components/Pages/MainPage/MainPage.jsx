@@ -7,6 +7,7 @@ const MainPage = () => {
     return (
         <div>
             <NavBar />
+            <EventPage event="saved" />
             <EventPage event="near_by" />
             <EventPage event="career & Business" />
             <EventPage event="Outdoors & Adventure" />
