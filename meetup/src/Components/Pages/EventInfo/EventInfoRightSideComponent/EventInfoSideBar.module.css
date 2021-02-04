@@ -19,3 +19,8 @@
     top : 42%;
     right: 9%;
 }
+@media only screen and (max-width: 600px){
+    .eventInfo__sidebar_container{
+        visibility: hidden;
+    }
+}
