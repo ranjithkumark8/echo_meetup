@@ -38,9 +38,6 @@
     margin-top: 20px;
 }
 
-/* .footer_right>div {
-    display: flex;
-}  */
 .footer_right>div>div {
     margin : 5px
 }
