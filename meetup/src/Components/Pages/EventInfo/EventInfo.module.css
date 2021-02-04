@@ -15,7 +15,7 @@ body{
 }
 .eventInfo__hostingInfo{
     display: flex;
-    line-height: 19px;
+   
 }
 .eventInfo__shareDiv{
     border : 1px solid silver;
@@ -28,7 +28,7 @@ body{
 }
 .eventInfo__hosting_header{
     margin : 1% 15% 0% ;
-    line-height: 28px;
+    line-height: 26px;
     padding-top: 10px;
    
 }
@@ -42,4 +42,28 @@ body{
     border-radius: 40px;
     width: 80px;
     margin-top: 30px;
+}
+@media only screen and (max-width: 600px){
+    .eventInfo__hosting_header{
+        margin : 2%  ;
+        padding-left: 30px;
+    }
+    .eventInfo__hostingInfo{
+        margin-right: 40px;
+        flex-direction: column;
+        
+    }
+    .eventInfo__shareDiv{
+        margin-left: 10%;
+        margin-top: 0px;
+        width: 100px;
+    }
+    .eventInfo__event_date{
+        text-align: center;
+        
+    }
+    .eventInfo__event_name{
+        font-size: 20px;
+        
+    }
 }

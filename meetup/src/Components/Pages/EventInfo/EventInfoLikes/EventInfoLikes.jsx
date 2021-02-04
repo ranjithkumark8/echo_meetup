@@ -12,10 +12,11 @@ const EventInfoLikes = () => {
     const [dislikes, setDislikes] = React.useState(0);
     const [action, setAction] = React.useState(null);
     const eventInfoData = useSelector(state => state.eventInfo.eventInfoData)
-  console.log(eventInfoData)
-  if(eventInfoData !== undefined){
     console.log(eventInfoData)
-}
+
+    if(eventInfoData !== undefined){
+      console.log(eventInfoData)
+    }
 
     const like = () => {
       setLikes(1);
@@ -46,20 +47,19 @@ const EventInfoLikes = () => {
     ];
     return (
         <div className = {Styles.eventInfoLikes__container}>
-            <h3 style = {{fontSize : "20px", marginTop : "20px",fontWeight : 'bold'}}>Comments</h3>
+            <h3 style = {{fontSize : "20px", marginTop : "20px",fontWeight : 'bold'}}>Comments({eventInfoData.comments ? eventInfoData.comments.length : 0})</h3>
             {eventInfoData.comments?.map(e => (
-              <Comment style = {{backgroundColor : "white" , padding : "10px" , borderRadius : "8px" , marginTop : "20px",marginRight : "40%"}}
+              <Comment className = {Styles.comment}
               actions ={actions}
-              author = "Vibhore"
+              author = {e.name}
               avatar ={
               <Avatar
-              src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png"
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRjvS45-B5Lc1KFMb-d914IuNypar6wp-H1Q&usqp=CAU"
               alt="author"
               />}
               content={
                   <p>
-                  We supply a series of design principles, practical patterns and high quality design
-                  resources .
+                 {e.comment}
                   </p>}
               datetime={
                   <Tooltip title={moment().format('YYYY-MM-DD HH:mm:ss')}>
@@ -68,27 +68,7 @@ const EventInfoLikes = () => {
               }
       />
             ))}
-             
-            {/* <Comment style = {{backgroundColor : "white" , padding : "10px" , borderRadius : "8px" , marginTop : "20px",marginRight : "40%"}}
-                    actions ={actions}
-                    author = "Vibhore"
-                    avatar ={
-                    <Avatar
-                    src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png"
-                    alt="author"
-                    />}
-                    content={
-                        <p>
-                        We supply a series of design principles, practical patterns and high quality design
-                        resources .
-                        </p>}
-                    datetime={
-                        <Tooltip title={moment().format('YYYY-MM-DD HH:mm:ss')}>
-                        <span>{moment().fromNow()}</span>
-                        </Tooltip>
-                    }
-            /> */}
-           <AddEventLikes />
+             <AddEventLikes/>
            
         </div>
     )

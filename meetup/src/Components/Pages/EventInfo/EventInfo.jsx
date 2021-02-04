@@ -17,14 +17,15 @@ const EventInfo = () => {
     const dispatch = useDispatch();
     const eventInfoData = useSelector(state => state.eventInfo.eventInfoData)
    const {id} = useParams();
-   
+
     console.log(id)
     React.useEffect(()=>{
         dispatch(getEventInfoData(id))
     },[dispatch])
 
+    console.log(eventInfoData)
     return (
-        <div>
+        <div >
             <EventInfoHeader/>
             
             <div style = {{borderBottom : "1px solid silver"}}>
@@ -49,7 +50,7 @@ const EventInfo = () => {
             </div>
             <div style = {{backgroundColor : "whitesmoke" , margin : "0px" , padding : "0px"}}>
                 
-                <EvetInfoDetails/>
+                <EvetInfoDetails {...eventInfoData}/>
                 <EventInfoAttendes {...eventInfoData}/>
                 <EventInfoLikes {...eventInfoData}/>
             </div>
