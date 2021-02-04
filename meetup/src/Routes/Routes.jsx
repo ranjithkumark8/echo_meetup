@@ -5,6 +5,7 @@ import { EventC2 } from "../Components/Pages/EventCreation/EventC2";
 import { EventC3 } from "../Components/Pages/EventCreation/EventC3";
 import { EventC4 } from "../Components/Pages/EventCreation/EventC4";
 import { EventC5 } from "../Components/Pages/EventCreation/EventC5";
+import { EventInfo } from "../Components/Pages/EventInfo/EventInfo";
 import { Find } from "../Components/Pages/Find/Find";
 import { LandingPage } from "../Components/Pages/LandingPage/LandingPage";
 import { Login } from "../Components/Pages/Login/Login";
@@ -45,7 +46,8 @@ export const Routes = () => {
             <Route exact path="/start/guidlines">
                 <EventC5 />
             </Route>
-            <Route exact path="/login">
+            <Route path="/event/:id" exact>
+                <EventInfo/>
             </Route>
             <Route>
                 <div>Error, Page Not Found</div>
