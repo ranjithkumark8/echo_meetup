@@ -4,7 +4,7 @@ import Styles from './EventInfoDetails.module.css'
 const EvetInfoDetails = ({img}) => {
     return (
         <div className = {Styles.evetInfoDetails__details_container}>
-            <img src = {img} alt = {img} height = "300px" width = "450px"style = {{borderRadius : "10px"}}/>
+            <img className = {Styles.event_image} src = {img} alt = {img} height = "300px" width = "450px"style = {{borderRadius : "10px"}}/>
             <br/>
             <h3 style = {{fontSize : "20px", marginTop : "70px",fontWeight : 'bold'}}>Details</h3>
             <p>Hello all Airflow-lovers in Bangalore/India.</p>

@@ -34,11 +34,11 @@ const EventNavbar = ({id ,attendees,img ,header , date}) => {
     
     return (
         <div className = {Styles.eventInfo__navabar_container}>
-            <div >
+            <div className = {Styles.navbar__left} >
                 <p>{date}</p>
                 <h3>{header}</h3>
             </div>
-            <div style = {{display : "flex" ,justifyContent : "space-between"}}>
+            <div className = {Styles.event_goingDiv} >
                 <div style = {{fontSize : "18px" , fontWeight : "600"}}>Free</div>
                 <div className = {Styles.eventInfo__navbar_star_icon}>
                     <AiOutlineStar style = {{fontSize : "20px",color : "grey" }}/>
@@ -59,8 +59,8 @@ const EventNavbar = ({id ,attendees,img ,header , date}) => {
                             <br/>
                             <span style = {{fontSize : "28px" , fontWeight : "700" , padding : "20px 30px"}}>{header}</span>
                         </div>
-                        <p style = {{marginLeft : "50px"}}>If anything changes just update your response.</p>
-                        <p style = {{marginLeft : "70px"}}>It helps host to prepare and its polite :) .</p>  
+                        <p className = {Styles.modal_para}>If anything changes just update your response.</p>
+                        <p className = {Styles.modal_para} >It helps host to prepare and its polite :) .</p>  
                         <div className = {Styles.addToCalenderDiv}>Add To Calender</div>  
                         <div className = {Styles.response_div}>
                             <div style = {{display : "flex",alignItems : "baseline",color : "#00D480"}}>

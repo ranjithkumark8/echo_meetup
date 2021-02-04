@@ -49,7 +49,7 @@ const EventInfoLikes = () => {
         <div className = {Styles.eventInfoLikes__container}>
             <h3 style = {{fontSize : "20px", marginTop : "20px",fontWeight : 'bold'}}>Comments({eventInfoData.comments ? eventInfoData.comments.length : 0})</h3>
             {eventInfoData.comments?.map(e => (
-              <Comment style = {{backgroundColor : "white" , padding : "10px" , borderRadius : "8px" , marginTop : "20px",marginRight : "40%"}}
+              <Comment className = {Styles.comment}
               actions ={actions}
               author = {e.name}
               avatar ={

@@ -59,7 +59,7 @@ const HealthEvents = ({ specificEvents }) => {
                 {specificEvents.map((item) => (
                     <div key={item.id} className={styles.event_card} onClick = {() =>handleClick(item.id)}>
                         {item.is_online_event && <div className={styles.event_card_online}><IoIosVideocam /> Online event</div>}
-                        <img src={item.img} alt={item.header} />
+                        <img src={item.img} alt={item.header} onClick = {() =>handleClick(item.id)}/>
                         <div className={styles.event_card_info}>
                             <div className={styles.event_card_date}>{item.date}</div>
                             <div className={styles.event_card_header}>{item.header}</div>

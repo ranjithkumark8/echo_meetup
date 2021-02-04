@@ -44,7 +44,6 @@
     line-height: 28px;
     margin: 50px auto  ;
     width: 300px;
-    
     margin-bottom: 40px;
 }
 .addToCalenderDiv{
@@ -55,4 +54,50 @@
     margin-left: 130px;
     color : #0098AB;
     margin-top: 30px;
+}
+.event_goingDiv{
+    display : flex ;
+    justify-content : space-between
+}
+.modal_para{
+    margin-left : 50px
+}
+@media only screen and (max-width: 600px){
+    .addToCalenderDiv{
+        padding: 10px 2px;
+        width: 130px;
+        margin-left: 20px;
+        margin-top: 10px;
+        text-align: center;
+    }
+    .eventInfo__navabar_container{
+        flex-direction: column;
+        height: 200px;
+        padding: 0px 0px;
+        justify-content:center;}
+    
+    .modal_para{
+        margin-left : 20px
+    }
+    .response_div{
+        width: 150px;
+    }
+    .event_goingDiv{
+        flex-direction: column;
+        margin-right: 80px;
+        /* align-items: left; */
+        /* justify-content: center; */
+    }
+    .eventInfo__navbar_attend_online_button{
+        margin-left: 5px;
+        margin-top: 20px;
+    }
+    .eventInfo__navbar_star_icon{
+        margin-left: 5px;
+        margin-top: 10px;
+        width: 50px;
+    }
+    .navbar__left{
+        visibility: hidden;
+    }
 }
