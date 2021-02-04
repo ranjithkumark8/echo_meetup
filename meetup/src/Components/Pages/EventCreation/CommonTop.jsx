@@ -19,7 +19,7 @@ const CommonTop = () => {
             date_range: "next_week",
             attendees: [],
             comments: [],
-            isStar: false
+            isStar: false 
         }
         axios.post("https://meetup-project.herokuapp.com/events",
             payload
