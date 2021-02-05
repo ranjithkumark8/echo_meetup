@@ -1,9 +1,10 @@
 import React from "react";
 import { Comment, Tooltip, Avatar } from 'antd';
+import moment from 'moment';
 
-export const EventComment = ({ children, img, comment }) => (
+export const EventComment = ({ children, img, comment, name, id }) => (
     <Comment
-        author={<p>Han Solo</p>}
+        author={<p>{name}</p>}
         avatar={
             <Avatar
                 src={img}
@@ -14,6 +15,11 @@ export const EventComment = ({ children, img, comment }) => (
             <p>
                 {comment}
             </p>
+        }
+        datetime={
+            <Tooltip key={id} title={moment().format('YYYY-MM-DD HH:mm:ss')}>
+                <span>{moment().fromNow()}</span>
+            </Tooltip>
         }
     >
         {children}

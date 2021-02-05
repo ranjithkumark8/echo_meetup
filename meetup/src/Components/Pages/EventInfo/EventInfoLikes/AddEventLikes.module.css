@@ -1,9 +1,19 @@
 .addEventLikes__Container {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
-    margin: 2% 40% 15% 0%;
+    margin: 40px auto;
+    padding: 20px 0;
+    border-top: 2px solid gray;
+}
 
+.eventInfo__Comments__container {
+    width: 70%;
+    margin: 50px auto;
+}
+
+.eventInfo__Comments__container>h2 {
+    font-weight: 600;
 }
 
 .addEventLikes__attendes_image {
@@ -22,8 +32,9 @@ textarea {
 
 .send_icon {
     margin-left: 30px;
-    font-size: 30px;
-    color: grey;
+    font-size: 25px;
+    color: crimson;
+    cursor: pointer;
 }
 
 @media only screen and (max-width: 600px) {
@@ -46,6 +57,7 @@ textarea {
     .send_icon {
         margin-top: 20px;
         margin-left: 10px;
+        font-size: 50px;
     }
 }
 
