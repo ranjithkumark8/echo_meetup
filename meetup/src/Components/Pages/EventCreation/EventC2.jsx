@@ -9,7 +9,7 @@ const EventC2 = () => {
 
     const handleInput = (e) => {
         setCategory(e.target.value)
-       
+
     }
     return (
 
@@ -17,7 +17,7 @@ const EventC2 = () => {
             <CommonTop />
             <div style={{ width: "100%", display: "flex" }}>
                 <div style={{ backgroundColor: "rgb(0, 130, 148) ", width: "30%", height: "15px" }} ></div>
-                <div style={{ backgroundColor: "lightgrey ", width: "60%", height: "15px" }} ></div>
+                <div style={{ backgroundColor: "lightgrey ", width: "100%", height: "15px" }} ></div>
             </div>
             <div className={styles.eve1} >
                 <h5>Step 2 of 5</h5>
@@ -42,7 +42,7 @@ const EventC2 = () => {
             <div className={styles.eve2_button}>
                 <Link to="/start/name" ><button>Next</button></Link>
             </div>
-            <div style={{ clear: "both" , marginBottom:"30px" }}></div>
+            <div style={{ clear: "both", marginBottom: "30px" }}></div>
         </div>
     )
 }

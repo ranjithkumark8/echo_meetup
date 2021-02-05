@@ -97,15 +97,20 @@ export const Find = () => {
         setFilteredData(eventData);
     }
 
+    const handleClick = (id) => {
+        history.push(`/event/${id}`)
+    }
+
+
     useEffect(() => {
         handleFilterData();
         console.log(url)
     }, [url])
     console.log(url)
 
-    // useEffect(() => {
-    //     dispatch(eventFetch());
-    // }, [])
+    useEffect(() => {
+        window.scrollTo(0, 0)
+    }, [])
 
 
     if (!isLoggedin) {
@@ -143,7 +148,7 @@ export const Find = () => {
                         filteredData.length === 0 ? <div>No events available...</div> :
                             filteredData?.map(item => {
                                 return (
-                                    <div key={item.id} className={styles.findContainer__eventCard__parent__child}>
+                                    <div onClick={() => handleClick(item.id)} key={item.id} className={styles.findContainer__eventCard__parent__child}>
                                         <div className={styles.findContainer__eventCard__parent__child__image}>
                                             {item.is_online_event && <div className={styles.findContainer__eventCard__parent__child__image__icon}><BsFillCameraVideoFill /> <span>Online event</span></div>}
                                             <img src={item.img} alt={item.header} />
