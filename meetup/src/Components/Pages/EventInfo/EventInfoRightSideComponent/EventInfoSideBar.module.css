@@ -24,6 +24,8 @@
         visibility: hidden;
     }
 }
-@media only screen and (min-width: 992px) {
-    
+@media only screen and (max-width: 992px) {
+    .eventInfo__sidebar_container{
+        display: none;
+    }
 } 

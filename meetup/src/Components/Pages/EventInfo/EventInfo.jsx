@@ -39,7 +39,7 @@ const EventInfo = () => {
                 <span className = {Styles.eventInfo__event_name}>{eventInfoData.header}</span>
                 <br/>
                <div className = {Styles.eventInfo__hostingInfo}>
-                    <img className = {Styles.eventInfo__hostingInfo_image} src = {eventInfoData.img} alt = {eventInfoData.img}/>
+                    <img className = {Styles.eventInfo__hostingInfo_image} src = {eventInfoData.img} alt = "hostee"/>
                     <div style = {{marginLeft : "30px" , lineHeight : "32px" , marginTop : "15px"}}>
                         <p style = {{fontSize : "16px",marginTop : "20px"}}>Hosted by</p>
                         <p style = {{fontSize : "16px" , fontWeight : "bolder"}}>Sumit M. and Kaxil N.</p>

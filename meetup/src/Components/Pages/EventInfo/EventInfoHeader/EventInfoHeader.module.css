@@ -39,13 +39,8 @@
     width: 50%;
 }
 @media only screen and (max-width: 600px) {
-    .header{
-        padding : 2px ;
-        flex-direction: column;
-        
-        justify-content: flex-start;
-        line-height: 20px;
-      
+    .EventInfoHeader__searchBar{
+        display: none;
     }
     .eventInfo_left{
        justify-content: space-evenly;
@@ -54,21 +49,32 @@
     }
     .eventInfo_right{
        justify-content: space-evenly;
-       
         margin-left: 2%;
-        width: fit-content;
+        width: 80%;
     }
     .leftMargin{
         margin-left: 10px;
     }
     .logo{
-        margin-left: 30px;
+        margin-left: 10px;
+        width: 30px;
     }
     .eventInfoHeader__startAGroup{
-       font-size: 13px;
-       display: none;
+      display: none;
     }
 } 
-@media only screen and (min-width: 992px) {
-    
+@media only screen and (max-width: 992px) {
+    .logo{
+        width: 80px;
+    }
+    .EventInfoHeader__searchBar{
+       margin-left: 20px;
+    }
+    .eventInfo_right{
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        margin-left: 5%;
+        width: 70%;
+    }
 } 

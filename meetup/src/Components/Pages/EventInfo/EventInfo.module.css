@@ -60,13 +60,12 @@ body{
     }
     .eventInfo__hostingInfo{
         margin-right: 40px;
-        flex-direction: column;
-        
     }
     .eventInfo__shareDiv{
         margin-left: 10%;
-        margin-top: 0px;
-        width: 100px;
+        margin-top: 30px;
+        height: 50px;
+        width: 130px;
     }
     .eventInfo__event_date{
         text-align: center;
@@ -76,7 +75,19 @@ body{
         font-size: 20px;
         
     }
+    
 }
-@media only screen and (min-width: 992px) {
+@media only screen and (max-width: 992px) {
+    .eventInfo__hosting_header{
+        margin : 1% 5% 0% ;
+        line-height: 26px;
+        padding-top: 10px;
+    }
+    .eventInfo__shareDiv{
+        margin-left: 40%;
+        margin-top: 30px;
+        height: 50px;
+        width: 100px;
+    }
     
 } 

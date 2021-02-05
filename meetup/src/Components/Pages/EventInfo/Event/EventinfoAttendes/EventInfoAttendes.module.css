@@ -28,7 +28,7 @@
 }
 .eventInfoAttendes__header{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
 }
 .eventInfoAttendesCard_Container{
     display: flex;
@@ -59,10 +59,29 @@ input:focus{
     line-height: 39px;
     padding: 10px ;
 }
+.see_all_button{
+    color : #0098AB ;
+    font-size : 16px;
+    border : none;
+    background-color : whitesmoke
+}
+
 @media only screen and (max-width: 600px){
     .eventInfoAttendes__header{
-        flex-direction: column;
+       flex-wrap: wrap;
         background-color: whitesmoke;
-        margin : 5% 55% 5% 2% ; 
+        margin : 5% 55% 5% 0% ; 
+    }
+    Styles.eventInfoAttendes_container{
+        margin : 5% 10% 0% 5% ; 
     }
 }
+@media only screen and (max-width: 992px) {
+    .see_all_button{
+       margin-top: 70px;
+       color : #0098AB ;
+    }
+    .eventInfoAttendes__header{
+        align-items: baseline;
+    }
+} 

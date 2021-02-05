@@ -34,7 +34,7 @@ const Signup = () => {
                 </div>
                 {/* <GoogleLogin className = {Styles.signup__single_div} clientId = "314996264717-s9mnl2m68nnj38lbpl7lcra9f0agldip.apps.googleusercontent.com" onSuccess = {responseGoogle} onFailure = {responseGoogle} cookiePolicy={'single_host_origin'}  style = {{backgroundColor : "blue"}}/> */}
                 <div className = {Styles.signup__single_div}>
-                    <DiApple style = {{color : "black"}}/>
+                    <DiApple style = {{color : "black" }}/>
                     <span className = {Styles.signup__single_span}>
                         Continue with Apple
                     </span>

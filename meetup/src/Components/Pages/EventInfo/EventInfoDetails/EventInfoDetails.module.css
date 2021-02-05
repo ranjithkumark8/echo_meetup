@@ -15,11 +15,12 @@ ol{
 }
 @media only screen and (max-width: 600px){
     .event_image{
-        width: 200px;
-        height: 100px;
+        width: 250px;
+        height: 150px;
+        margin-left: 10%;
     }
     .evetInfoDetails__details_container{
-        margin : 0% 7%;
+        margin : 0% 4%;
     }
 }
 @media only screen and (min-width: 992px) {
