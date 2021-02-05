@@ -6,8 +6,8 @@ const CommonTop = () => {
 
     const { category, header } = React.useContext(AppContext)
     const handleClick = () => {
-        console.log(header)
-        console.log(category)
+        // console.log(header)
+        // console.log(category)
 
         const payload = {
             date: "Fri, Feb 12, 2:00 PM GMT+5:30",

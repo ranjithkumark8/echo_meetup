@@ -15,7 +15,7 @@ const EventC5 = () => {
                 <div style={{ backgroundColor: "lightgrey ", height: "15px" }} ></div>
             </div>
             <div className={styles.eve1} >
-                <h5>Step 5 out of five</h5>
+                <h5>Step 5 of 5</h5>
                 <h1>Almost done! Just take a minute to <br /> review our guidelines</h1>
                 <br />
                 <div>Meetup is all about helping people live fuller, happier lives—with the help of strong communities.

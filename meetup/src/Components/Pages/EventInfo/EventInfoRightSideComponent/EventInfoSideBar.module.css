@@ -15,7 +15,7 @@
    
 }
 .eventInfo__sidebar_container{
-    position: fixed;
+    position: absolute;
     top : 42%;
     right: 9%;
 }
