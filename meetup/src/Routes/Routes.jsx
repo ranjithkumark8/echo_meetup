@@ -11,6 +11,7 @@ import { LandingPage } from "../Components/Pages/LandingPage/LandingPage";
 import { Login } from "../Components/Pages/Login/Login";
 import { MainPage } from "../Components/Pages/MainPage/MainPage";
 import { Signup } from "../Components/Pages/SignUp/Signup";
+import { SavedEvents } from "../Components/Pages/SavedEvents/SavedEvents";
 
 
 export const Routes = () => {
@@ -47,7 +48,10 @@ export const Routes = () => {
                 <EventC5 />
             </Route>
             <Route path="/event/:id" exact>
-                <EventInfo/>
+                <EventInfo />
+            </Route>
+            <Route path="/saved-events" exact>
+                <SavedEvents />
             </Route>
             <Route>
                 <div>Error, Page Not Found</div>

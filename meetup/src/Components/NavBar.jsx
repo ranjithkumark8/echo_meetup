@@ -25,6 +25,10 @@ export const NavBar = () => {
         dispatch(logout());
     }
 
+    const handleSavedEvents = () => {
+        history.push("/saved-events");
+    }
+
     return (
         <nav>
             <div className={styles.left}>
@@ -47,7 +51,7 @@ export const NavBar = () => {
                     <IoPersonCircleOutline className={styles.actions__avatar} />
                     <IoIosArrowUp className={styles.actions__arrow} />
                     <div className={styles.action__options}>
-                        <p>Saved events</p>
+                        <p onClick={handleSavedEvents}>Saved events</p>
                         <p>Your groups</p>
                         <p>Your events</p>
                         <hr />
