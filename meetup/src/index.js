@@ -7,6 +7,7 @@ import { BrowserRouter } from 'react-router-dom';
 import { AppContextProvider } from './Components/AppContextProvider';
 import { Provider } from 'react-redux';
 import store from "./Redux/store"
+import { EventInfoContextProvider } from './Context/EventInfoContext';
 
 
 
@@ -15,8 +16,10 @@ ReactDOM.render(
   <BrowserRouter>
       <AppContextProvider>
         <Provider store={store}>
+          <EventInfoContextProvider>
           <App />
-        </Provider>
+          </EventInfoContextProvider>
+         </Provider>
       </AppContextProvider>
     </BrowserRouter>
   </React.StrictMode>,

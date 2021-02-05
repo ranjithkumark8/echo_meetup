@@ -25,3 +25,5 @@ ol {
         margin: 0% 7%;
     }
 }
+
+@media only screen and (min-width: 992px) {}

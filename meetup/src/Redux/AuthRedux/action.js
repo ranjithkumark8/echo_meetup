@@ -71,6 +71,7 @@ export const getLoginDetails = (payload) => dispatch => {
     dispatch(getLoginDetailsRequest());
     return axios.get("https://meetup-project.herokuapp.com/credentials?email=" + payload.email)
         .then(res => {
+            console.log(res.data[0])
             dispatch(getLoginDetailsSuccess(res.data[0]));
             return {
                 success: true

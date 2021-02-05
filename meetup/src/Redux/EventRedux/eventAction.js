@@ -69,14 +69,15 @@ const eventFetch = () => (dispatch) => {
     .catch((err) => dispatch(eventFailure(err)));
 };
 
-const favoriteEventUpdate = (id, isStar) => (dispatch) => {
+const favoriteEventUpdate = (id, star) => (dispatch) => {
     dispatch(favoriteEventRequest())
     return axios
-        .patch(`https://meetup-project.herokuapp.com/events/${id}`, {isStar:isStar})
+        .patch(`https://meetup-project.herokuapp.com/events/${id}`, {isStar:star})
         .then((res) => {
-            console.log(res.data, "saved events request")
-            dispatch(eventSuccess(res.data))
-            return dispatch(favoriteEventSuccess(res.data))
+            // console.log(res.data, "saved events request")
+            dispatch(favoriteEventSuccess(res.data))
+            // return dispatch(favoriteEventSuccess(res.data))
+          return {success : true}
         })
         .catch((err) => dispatch(favoriteEventFailure(err)))
 }

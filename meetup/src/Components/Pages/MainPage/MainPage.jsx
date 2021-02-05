@@ -15,7 +15,7 @@ const MainPage = () => {
 
     if (!isLoggedin) {
         return (
-            <Redirect to="/login" />
+            <Redirect to="/" />
         )
     }
 

@@ -9,9 +9,6 @@ import moment from 'moment';
 
 const EventInfoSideBar = ({img , date , header}) => {
    
-    const [value , setValue] = React.useState(moment('2017-01-25'))
-    const [selectedValue , setselectedValue] = React.useState(moment('2017-01-25'))
-   
     return (
         <div className = {Styles.eventInfo__sidebar_container}>
             <div className = {Styles.eventInfo__sidebar_upper_div}>
