@@ -1,6 +1,6 @@
 import React from "react"
 import { CommonTop } from "./CommonTop"
-import styles from "../../EventCreation.module.css"
+import styles from "./EventCreation.module.css"
 import { Link } from "react-router-dom"
 import { AppContext } from "../../AppContextProvider"
 

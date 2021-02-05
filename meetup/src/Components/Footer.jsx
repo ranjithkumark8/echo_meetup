@@ -9,7 +9,7 @@ const Footer = ( ) => {
     return (
             <div className={styles.footer}>
                 <div className={styles.footer_box} >
-                    <div>
+                    <div className = {styles.start_a_group}>
                         <Link to="/" style={{color : "white"  }}>Start a new group</Link>
                         <div style={{height : "0.5px" , backgroundColor :"gray" , margin:"30px 0px" }} ></div>
                     </div>

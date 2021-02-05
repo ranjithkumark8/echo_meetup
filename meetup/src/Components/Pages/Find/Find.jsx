@@ -3,11 +3,10 @@ import { useDispatch, useSelector } from "react-redux";
 import { Redirect, useHistory, useLocation } from "react-router-dom";
 import { EventCategories } from "../../EventCategories";
 import { NavBar } from "../../NavBar";
-import { BsFillCameraVideoFill, BsStar, BsStarFill } from 'react-icons/bs';
-import { FiShare } from 'react-icons/fi';
 import { IoIosArrowDown } from 'react-icons/io';
 import styles from "./Find.module.css";
 import { eventFetch } from "../../../Redux/EventRedux/eventAction";
+import { EventCard } from "./EventCard";
 
 
 export const Find = () => {
@@ -146,30 +145,9 @@ export const Find = () => {
                 <div className={styles.findContainer__eventCard__parent}>
                     {
                         filteredData.length === 0 ? <div>No events available...</div> :
-                            filteredData?.map(item => {
-                                return (
-                                    <div onClick={() => handleClick(item.id)} key={item.id} className={styles.findContainer__eventCard__parent__child}>
-                                        <div className={styles.findContainer__eventCard__parent__child__image}>
-                                            {item.is_online_event && <div className={styles.findContainer__eventCard__parent__child__image__icon}><BsFillCameraVideoFill /> <span>Online event</span></div>}
-                                            <img src={item.img} alt={item.header} />
-                                        </div>
-                                        <div className={styles.findContainer__eventCard__parent__child__content}>
-                                            <p>{item.date}</p>
-                                            <h3>{item.header}</h3>
-                                            <p>{item.sub_heading}</p>
-                                            <div className={styles.findContainer__eventCard__parent__child__content__info}>
-                                                <div>
-                                                    <span>{item.attendees.length}</span><p>attendees</p>
-                                                </div>
-                                                <div>
-                                                    <FiShare />
-                                                    {item.isStar ? <BsStarFill style={{ marginLeft: 15 }} className={styles.star} /> : <BsStar style={{ marginLeft: 15 }} />}
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                )
-                            })
+                            filteredData?.map(item => (
+                                <EventCard key={item.id} {...item} handleClick={handleClick} />
+                            ))
                     }
                 </div>
             </section>

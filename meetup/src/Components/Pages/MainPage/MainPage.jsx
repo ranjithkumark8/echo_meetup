@@ -4,6 +4,7 @@ import { Redirect } from "react-router-dom";
 import { EventCategories } from "../../EventCategories";
 import { NavBar } from "../../NavBar";
 import { EventPage } from './EventPage';
+import { YourEvents } from "./YourEvents";
 
 const MainPage = () => {
     const isLoggedin = useSelector(state => state.authReducer.isLoggedin);
@@ -23,6 +24,7 @@ const MainPage = () => {
     return (
         <div>
             <NavBar />
+            <EventPage event="yourEvents" />
             <EventPage event="saved" />
             <EventPage event="near_by" />
             <EventPage event="career & Business" />
@@ -31,6 +33,7 @@ const MainPage = () => {
             <EventPage event="Health & Wellness" />
             <EventPage event="Tech" />
             <EventCategories />
+            
         </div>
     )
 }
