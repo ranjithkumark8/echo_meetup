@@ -9,9 +9,8 @@ In this project , we have tried to make a perfect clone of meetup.com.
 ## Technologies used
   
  
+  * React
   * CSS
-  * JavaScript
-  * HTML
 
 
 ## How to use the product
