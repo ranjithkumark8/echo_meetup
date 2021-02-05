@@ -1,9 +1,11 @@
 body {
-    font-family: 'Graphik Meetup',-apple-system,BlinkMacSystemFont,Roboto,Helvetica,Arial,sans-serif;
+    font-family: 'Graphik Meetup', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif;
 }
+
 .eve1 {
     text-align: center;
 }
+
 .eve1 h1 {
     font-size: 56px;
     line-height: 1.24;
@@ -11,8 +13,9 @@ body {
     color: rgb(0, 0, 0);
     font-weight: 850;
 }
+
 .eve1 h5 {
-    color:  gray;
+    color: gray;
     padding: 10px;
     font-weight: 100;
 }
@@ -20,7 +23,7 @@ body {
 .eve1 h4 {
     color: #333;
     font-weight: 50;
-    margin-top: 30px ;
+    margin-top: 30px;
 }
 
 .eve1 span {
@@ -33,46 +36,65 @@ body {
     margin-top: 70px;
     font-size: xx-large;
 }
-.eve1_button , .eve2_button{
+
+.eve1_button,
+.eve2_button {
     margin: 0px 50px 30px 0px;
 }
-.eve1_button button , .eve2_button button {
+
+.eve1_button button,
+.eve2_button button {
     float: right;
-    margin-top: 120px;
+    margin-top: 50px;
     width: 150px;
     height: 40px;
     border-radius: 5px;
     border: 0px;
     color: white;
     background-color: rgb(246, 88, 88);
+    cursor: pointer;
 }
 
 .eve2 {
     width: 600px;
-    margin : 30px auto ;
+    margin: 30px auto;
     height: 200px;
 }
-.eve2 > div >button {
+
+.eve2>div>button {
     margin: 30px 20px;
     width: 150px;
     height: 40px;
     border: 1px solid rgb(0, 130, 148);
     border-radius: 5px;
+    cursor: pointer;
 }
-.eve2 > div  >button:hover {
+
+.eve2>div>button:hover {
     background-color: rgb(0, 130, 148);
 }
+
 .eve2_button button {
     margin-top: 10px;
+    cursor: pointer;
 }
-.eve2_button :any-link , .eve1_button :any-link{
+
+.eve2_button :any-link,
+.eve1_button :any-link {
     text-decoration: none;
     color: white;
     font-size: large;
 }
+
 .eve3_list {
     text-align: left;
     width: 600px;
     margin: 30px auto;
     font-size: larger;
+}
+
+
+.eve2>div>button:focus {
+    background-color: rgb(0, 130, 148);
+    color: white;
 }

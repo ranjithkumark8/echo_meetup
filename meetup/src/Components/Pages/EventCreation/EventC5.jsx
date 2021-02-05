@@ -6,17 +6,16 @@ import { AppContext } from "../../AppContextProvider"
 
 const EventC5 = () => {
     const { header, setHeader } = React.useContext(AppContext)
-    // console.log(header)
     return (
 
         <div>
             <CommonTop />
             <div style={{ width: "100%", display: "flex" }}>
-                <div style={{ backgroundColor: "rgb(0, 130, 148) ", width: "80%", height: "15px" }} ></div>
-                <div style={{ backgroundColor: "lightgrey ", width: "19%", height: "15px" }} ></div>
+                <div style={{ backgroundColor: "rgb(0, 130, 148) ", width: "100%", height: "15px" }} ></div>
+                <div style={{ backgroundColor: "lightgrey ", height: "15px" }} ></div>
             </div>
             <div className={styles.eve1} >
-                <h5>Step 5 out of six</h5>
+                <h5>Step 5 of 5</h5>
                 <h1>Almost done! Just take a minute to <br /> review our guidelines</h1>
                 <br />
                 <div>Meetup is all about helping people live fuller, happier lives—with the help of strong communities.
@@ -39,6 +38,7 @@ const EventC5 = () => {
             <div className={styles.eve1_button}>
                 <button style={{ marginTop: "20px", width: "200px" }}><Link to="/home" >Agree and Proceed</Link></button>
             </div>
+            <div style={{ clear: "both" , marginBottom:"30px" }}></div>
         </div>
     )
 }

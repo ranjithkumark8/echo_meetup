@@ -45,7 +45,7 @@
 .footer_bottom {
     background-color: #0f1721;
     height: 120px;
-
+    
 }
 .footer_bottom > div {
     padding: 20px 50px;
@@ -74,7 +74,7 @@
     .footer_box{
         width: 100%;
         padding-right : 20px;
-        text-align: center;
+        text-align: left;
     }
 } 
 

@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useEffect } from "react"
 import { useSelector } from "react-redux";
 import { Redirect } from "react-router-dom";
 import { EventCategories } from "../../EventCategories";
@@ -8,11 +8,18 @@ import { EventPage } from './EventPage';
 const MainPage = () => {
     const isLoggedin = useSelector(state => state.authReducer.isLoggedin);
 
+
+    useEffect(() => {
+        window.scrollTo(0, 0)
+    }, [])
+
     if (!isLoggedin) {
         return (
-            <Redirect to="/login" />
+            <Redirect to="/" />
         )
     }
+
+
     return (
         <div>
             <NavBar />

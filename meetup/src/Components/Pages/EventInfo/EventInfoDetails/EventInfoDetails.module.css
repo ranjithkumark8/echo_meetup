@@ -1,14 +1,15 @@
-.evetInfoDetails__details_container{
-    margin : 0% 14%;
-    padding : 5% 16px;
+.evetInfoDetails__details_container {
+    padding: 5% 16px;
     line-height: 28px;
     background-color: whitesmoke;
 }
-p{
+
+p {
     font-size: 16px;
     margin-top: 20px;
 }
-ol{
+
+ol {
     font-size: 16px;
     margin-top: 20px;
     margin-left: 2%;
@@ -23,6 +24,5 @@ ol{
         margin : 0% 4%;
     }
 }
-@media only screen and (min-width: 992px) {
-    
-} 
+
+@media only screen and (min-width: 992px) {}

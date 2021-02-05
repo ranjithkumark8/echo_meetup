@@ -1,19 +1,21 @@
-.eventInfoLikes__container{
-    margin : 1% 15% ;
+.eventInfoLikes__container {
+    margin: 1% 15%;
     line-height: 28px;
     padding: 20px 0px;
-   
+
 }
-.comment{
-    background-color : white ;
-    padding : 10px;
-    border-radius : 8px;
-    margin-top : 20px;
-    margin-right : 40%
+
+.comment {
+    background-color: white;
+    padding: 10px;
+    border-radius: 8px;
+    margin-top: 20px;
+    margin-right: 40%
 }
-@media only screen and (max-width: 600px){
-    .eventInfoLikes__container{
-        margin : 1% 3% ;
+
+@media only screen and (max-width: 600px) {
+    .eventInfoLikes__container {
+        margin: 1% 3%;
     }
     .comment{
        margin : 20px ;

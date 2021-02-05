@@ -9,28 +9,39 @@ import { EventNavbar } from './EventNavabar/EventNavbar';
 import { EventInfoSideBar } from './EventInfoRightSideComponent/EventInfoSideBar';
 import { useDispatch, useSelector } from 'react-redux';
 import { getEventInfoData } from '../../../Redux/EventInformationRedux/action';
-import { useParams } from 'react-router-dom';
+import { useParams, Redirect } from 'react-router-dom';
 import { EventInfoContext } from '../../../Context/EventInfoContext';
-
 
 
 const EventInfo = () => {
     const dispatch = useDispatch();
     const eventInfoData = useSelector(state => state.eventInfo.eventInfoData)
-   const {id} = useParams();
-   const [isGoing,setIsGoing] = React.useContext(EventInfoContext)
+    const { id } = useParams();
+    const isLoggedin = useSelector(state => state.authReducer.isLoggedin);
+    const [isGoing, setIsGoing] = React.useContext(EventInfoContext)
 
     console.log(id)
-    React.useEffect(()=>{
+    React.useEffect(() => {
         dispatch(getEventInfoData(id))
-    },[id,dispatch])
+    }, [id, dispatch])
+
+    React.useEffect(() => {
+        window.scrollTo(0, 0);
+    }, [])
+
+    console.log(eventInfoData)
+
+    if (!isLoggedin) {
+        return <Redirect to="/login" />
+    }
+
 
     console.log(eventInfoData)
     return (
-        <div >
-            <EventInfoHeader/>
+        <div style={{ position: 'relative' }}>
+            <EventInfoHeader />
             {isGoing ? (
-                <div className = {Styles.isGoingEventDiv}>You are going to this event.</div>
+                <div className={Styles.isGoingEventDiv}>You are going to this event.</div>
             ) : ""}
             <div style = {{borderBottom : "1px solid silver"}}>
             <div className = {Styles.eventInfo__hosting_header}>
@@ -50,18 +61,17 @@ const EventInfo = () => {
                         <span style = {{marginLeft : "10px" , fontWeight : "bolder"}}>Share</span>
                     </div>
                 </div>
+                <div style={{ backgroundColor: "whitesmoke", margin: "0px", padding: "0px" }}>
+                    <EvetInfoDetails {...eventInfoData} />
+                    <EventInfoAttendes {...eventInfoData} />
+                    <EventInfoLikes {...eventInfoData} />
+                    <div style={{ borderBottom: "1px solid silver" }}></div>
+                </div>
             </div>
             </div>
-            <div style = {{backgroundColor : "whitesmoke" , margin : "0px" , padding : "0px"}}>
-                <EvetInfoDetails {...eventInfoData}/>
-                <EventInfoAttendes {...eventInfoData}/>
-                <EventInfoLikes {...eventInfoData}/>
-            </div>
-            <div style = {{borderBottom : "1px solid silver"}}></div>
-           <EventNavbar {...eventInfoData} />
-           <EventInfoSideBar {...eventInfoData}/>
+            <EventNavbar {...eventInfoData} />
         </div>
     )
 }
 
-export {EventInfo}
+export { EventInfo }

@@ -12,11 +12,11 @@ const EventC4 = () => {
         <div>
             <CommonTop />
             <div style={{ width: "100%", display: "flex" }}>
-                <div style={{ backgroundColor: "rgb(0, 130, 148) ", width: "64%", height: "15px" }} ></div>
-                <div style={{ backgroundColor: "lightgrey ", width: "35%", height: "15px" }} ></div>
+                <div style={{ backgroundColor: "rgb(0, 130, 148) ", width: "74%", height: "15px" }} ></div>
+                <div style={{ backgroundColor: "lightgrey ", width: "26%", height: "15px" }} ></div>
             </div>
             <div className={styles.eve1} >
-                <h5>Step 4 out of six</h5>
+                <h5>Step 4 of 5</h5>
                 <h1>Now describe what your group <br />will be about</h1>
                 <h4>People will see this when we promote your group but you’ll be able to add to it later, too.</h4>
                 <br />
@@ -41,9 +41,9 @@ const EventC4 = () => {
             </div>
 
             <div className={styles.eve1_button}>
-                <Link to="/start/guidlines" ><button>Next</button></Link>
+                <Link to="/start/guidelines" ><button>Next</button></Link>
             </div>
-
+            <div style={{ clear: "both" , marginBottom:"30px" }}></div>
         </div>
     )
 }

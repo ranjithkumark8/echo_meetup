@@ -65,9 +65,9 @@ const Footer = ( ) => {
                 <div className={styles.clear}></div>
                 <div className={styles.footer_bottom} >
                         <div>
-                            <h5><BiCopyright />2021 Meetup LLC</h5>
+                            <h5 style={{color:"white"}} ><BiCopyright />2021 Meetup LLC</h5>
                             <br/>
-                            <h5>Terms of Service . Private Policy</h5>
+                            <h5 style={{color:"white"}}>Terms of Service . Private Policy</h5>
                         </div>
                 </div>
             </div>

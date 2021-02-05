@@ -4,7 +4,7 @@ nav {
     justify-content: space-between;
     align-items: center;
     padding: 0 5%;
-    height: 10vh;
+    min-height: 10vh;
     border-bottom: 1px solid rgb(218, 218, 218);
 }
 
@@ -105,6 +105,7 @@ nav {
     border: 1px solid rgb(218, 218, 218);
     border-radius: 5px;
     cursor: auto;
+    z-index: 1;
 }
 
 .action__options>p {
@@ -127,4 +128,24 @@ nav {
 
 .action__options>p:hover {
     color: #339BA9;
+}
+
+
+
+/* media queries */
+
+@media screen and (max-width:1100px) {
+    .nav {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .left__search {
+        display: none;
+    }
+
+    .left {
+        width: fit-content;
+    }
 }

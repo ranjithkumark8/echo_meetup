@@ -52,9 +52,12 @@ const HealthEvents = ({ specificEvents }) => {
     }
 
     const handleSaved = (id, isStar) => {
-        console.log(id, isStar)
-        dispatch(favoriteEventUpdate(id, isStar = !isStar))
-        dispatch(eventFetch())
+        // console.log(id, isStar)
+        let star = !isStar
+        dispatch(favoriteEventUpdate(id,star))
+            .then((res) => { if(res.success){
+                dispatch(eventFetch())
+            }})
     }
     
     return (
