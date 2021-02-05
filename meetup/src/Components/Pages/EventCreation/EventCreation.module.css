@@ -4,11 +4,12 @@ body {
 
 .eve1 {
     text-align: center;
+    /* height: */
 }
 
 .eve1 h1 {
-    font-size: 56px;
-    line-height: 1.24;
+    font-size: 4em;
+    line-height: 2em;
     margin: 18px;
     color: rgb(0, 0, 0);
     font-weight: 850;
