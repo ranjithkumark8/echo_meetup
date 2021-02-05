@@ -36,10 +36,13 @@
     display: flex;
     flex-direction: column;
     border-radius: 3px;
-    overflow: hidden;
+    overflow: auto;
     position: relative;
 }
 
+.event_card::-webkit-scrollbar{
+    display: none;
+}
 .event_card:hover {
     cursor: pointer;
 }

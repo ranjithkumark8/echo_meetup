@@ -1,11 +1,18 @@
 import React from "react"
 import { CommonTop } from "./CommonTop"
-import styles from "../../EventCreation.module.css"
+import styles from "./EventCreation.module.css"
 import { Link } from "react-router-dom"
 import { AppContext } from "../../AppContextProvider"
 
 const EventC5 = () => {
-    const { header, setHeader } = React.useContext(AppContext)
+    const { header, setHeader,createEvent } = React.useContext(AppContext)
+    // const { createEvent } = React.useContext(AppContext)
+
+    const handleClick = () => {
+        // console.log(header)
+        // console.log(category)
+        createEvent()
+    }
     return (
 
         <div>
@@ -36,7 +43,9 @@ const EventC5 = () => {
                     <br /> and make sure it gets promoted to the right people.</div>
             </div>
             <div className={styles.eve1_button}>
-                <button style={{ marginTop: "20px", width: "200px" }}><Link to="/home" >Agree and Proceed</Link></button>
+                <button style={{ marginTop: "20px", width: "200px" }} onClick={handleClick}>
+                    <Link to="/home" >Agree and Proceed</Link>
+                </button>
             </div>
             <div style={{ clear: "both" , marginBottom:"30px" }}></div>
         </div>

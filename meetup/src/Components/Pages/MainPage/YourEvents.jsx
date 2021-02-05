@@ -1,8 +1,9 @@
 import React from "react"
+import { AppContext } from "../../AppContextProvider"
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 import styles from "./eventCommon.module.css"
-import { Link, useHistory } from "react-router-dom"
+import { Link , useHistory} from "react-router-dom"
 import { FiShare, FiStar } from "react-icons/fi"
 import { FaStar, FaFacebook, FaTwitter, FaLinkedin, FaCopy } from "react-icons/fa";
 import Modal from "react-modal"
@@ -11,7 +12,9 @@ import { IoIosVideocam } from "react-icons/io"
 import { useDispatch, useSelector } from "react-redux";
 import { eventFetch, favoriteEventUpdate } from "../../../Redux/EventRedux/eventAction";
 
-const LearningEvents = ({ specificEvents }) => {
+const YourEvents = () => {
+    const { events } = React.useContext(AppContext)
+    console.log(events)
     const [isModelOpen, setIsModelOpen] = React.useState(false)
     const [copied, setCopied] = React.useState(false)
     const history = useHistory();
@@ -46,32 +49,28 @@ const LearningEvents = ({ specificEvents }) => {
     const handleModelCopy = () => {
         setCopied(true)
     }
-
-    const handleClick = (id) => {
+    const handleClick =(id) => {
         history.push(`/event/${id}`)
     }
-
     const handleSaved = (id, isStar) => {
         // console.log(id, isStar)
         let star = !isStar
-        dispatch(favoriteEventUpdate(id, star))
-            .then((res) => {
-                if (res.success) {
-                    dispatch(eventFetch())
-                }
-            })
+        dispatch(favoriteEventUpdate(id,star))
+            .then((res) => { if(res.success){
+                dispatch(eventFetch())
+            }})
     }
     return (
         <div style={{ margin: "auto", width: "70%" }}>
             <div className={styles.heading}>
-                <h1>Learn new skills</h1>
-                <Link to={`/find?keyword=Learning`} className={styles.heading_allEvents}>See all</Link>
+                <h1>Your Events</h1>
+                {/* <Link to={`/find?keyword=Tech`} className={styles.heading_allEvents}>See all</Link> */}
             </div>
             <Carousel responsive={responsive} removeArrowOnDeviceType={["tablet", "mobile"]} >
-                {specificEvents.map((item) => (
+                {events.map((item) => (
                     <div key={item.id} className={styles.event_card} >
                         {item.is_online_event && <div className={styles.event_card_online}><IoIosVideocam /> Online event</div>}
-                        <img src={item.img} alt={item.header} onClick={() => handleClick(item.id)} />
+                        <img src={item.img} alt={item.header}onClick = {() =>handleClick(item.id)} />
                         <div className={styles.event_card_info}>
                             <div className={styles.event_card_date}>{item.date}</div>
                             <div className={styles.event_card_header}>{item.header}</div>
@@ -81,7 +80,7 @@ const LearningEvents = ({ specificEvents }) => {
                             {item.attendees.length > 0 ? <div className={styles.attendees_info_mem}>{item.attendees.length} going</div> : <div className={styles.attendees_info_mem}> </div>}
                             <div className={styles.attendees_info_icons}>
                                 <FiShare className={styles.attendees_info_icons_share} onClick={() => handleModel(item.id)} />
-                                {item.isStar === true && isLoggedin ? <FaStar style={{ color: "crimson" }} className={styles.attendees_info_icons_star} onClick={() => handleSaved(item.id, item.isStar)}></FaStar> : <FiStar className={styles.attendees_info_icons_star} onClick={() => handleSaved(item.id, item.isStar)}></FiStar>}
+                                {item.isStar === true && isLoggedin  ? <FaStar style={{ color: "crimson" }} className={styles.attendees_info_icons_star} onClick={() => handleSaved(item.id, item.isStar)}></FaStar> : <FiStar className={styles.attendees_info_icons_star} onClick={() => handleSaved(item.id, item.isStar)}></FiStar>}
                                 {/* {item.style ? true : false} */}
                             </div>
                         </div>
@@ -147,4 +146,5 @@ const LearningEvents = ({ specificEvents }) => {
         </div>
     )
 }
-export { LearningEvents }
+
+export {YourEvents}
