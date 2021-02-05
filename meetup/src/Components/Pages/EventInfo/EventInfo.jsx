@@ -9,7 +9,7 @@ import { EventNavbar } from './EventNavabar/EventNavbar';
 import { EventInfoSideBar } from './EventInfoRightSideComponent/EventInfoSideBar';
 import { useDispatch, useSelector } from 'react-redux';
 import { getEventInfoData } from '../../../Redux/EventInformationRedux/action';
-import { useParams } from 'react-router-dom';
+import { useParams, Redirect } from 'react-router-dom';
 
 
 
@@ -17,6 +17,7 @@ const EventInfo = () => {
     const dispatch = useDispatch();
     const eventInfoData = useSelector(state => state.eventInfo.eventInfoData)
     const { id } = useParams();
+    const isLoggedin = useSelector(state => state.authReducer.isLoggedin);
 
     console.log(id)
     React.useEffect(() => {
@@ -28,6 +29,13 @@ const EventInfo = () => {
     }, [])
 
     console.log(eventInfoData)
+
+    if (!isLoggedin) {
+        return <Redirect to="/login" />
+    }
+
+
+
     return (
         <div style={{ position: 'relative' }}>
             <EventInfoHeader />
