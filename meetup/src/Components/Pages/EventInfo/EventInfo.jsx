@@ -37,6 +37,13 @@ const EventInfo = () => {
 
 
     console.log(eventInfoData)
+
+    if (!isLoggedin) {
+        return <Redirect to="/login" />
+    }
+
+
+
     return (
         <div style={{ position: 'relative' }}>
             <EventInfoHeader />
