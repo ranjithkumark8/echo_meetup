@@ -5,10 +5,13 @@ import { BsChat } from 'react-icons/bs';
 import { IoPersonCircleOutline } from 'react-icons/io5';
 import { IoIosArrowUp, IoIosNotificationsOutline } from "react-icons/io"
 import { Link, useHistory } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { logout } from "../Redux/AuthRedux/action";
 
 export const NavBar = () => {
     const [keyword, setKeyword] = useState("");
     const history = useHistory();
+    const dispatch = useDispatch();
 
     const handleSearch = () => {
         history.push(`/find?keyword=${keyword}`);
@@ -16,6 +19,10 @@ export const NavBar = () => {
 
     const handleNewEvent = () => {
         history.push("/start/location");
+    }
+
+    const handleLogout = () => {
+        dispatch(logout());
     }
 
     return (
@@ -47,7 +54,7 @@ export const NavBar = () => {
                         <p>View profile</p>
                         <p>Settings</p>
                         <p>Help</p>
-                        <p>Log out</p>
+                        <p onClick={handleLogout}>Log out</p>
                     </div>
                 </div>
             </div>
