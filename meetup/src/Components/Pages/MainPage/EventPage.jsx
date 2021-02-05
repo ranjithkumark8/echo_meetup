@@ -6,22 +6,27 @@ import { LearningEvents } from "./LearningEvents"
 import { NearbyEvents } from "./NearbyEvents"
 import { NetworkEvents } from "./NetworkEvents"
 import { OutdoorEvents } from "./OutdoorEvents"
+import { SavedEvents } from "./SavedEvents"
 import { TechEvents } from "./TechEvents"
+
 const EventPage = (props) => {
 
     // console.log(props.event)
     const dispatch = useDispatch()
 
-    React.useEffect(() => {
-        dispatch(eventFetch())
-    }, [])
-
+    
     // const data = useSelector(state => state.eventReducer.eventData)
     // console.log(data)
     // console.log("props", props.event)
     const specificEvents = useSelector(state => state.eventReducer.eventData.filter(item => {
         return item.category === props.event
     }))
+
+    React.useEffect(() => {
+        dispatch(eventFetch())
+    }, [])
+
+    const savedEvents = useSelector(state => state.eventReducer.savedEvents)
     if (props.event === "near_by") {
         // console.log(specificEvents)
         return (
@@ -48,6 +53,16 @@ const EventPage = (props) => {
         return (
             <TechEvents specificEvents={specificEvents} />
         )
+    } else if (props.event === "saved") {
+        // console.log(savedEvents, "saved events data in event page")
+        if (savedEvents.length > 0) {
+            // console.log(savedEvents.length, "events pages")
+            return (
+                <SavedEvents specificEvents={savedEvents}/>
+            )
+        } else {
+            return null
+        }
     }
     else {
         return null

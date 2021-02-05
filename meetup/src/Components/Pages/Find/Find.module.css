@@ -9,28 +9,43 @@
     align-items: center;
     flex-wrap: wrap;
     width: 400px;
-    border: 1px solid red;
     padding: 15px 0;
     /* border-bottom: 1px solid rgb(236, 236, 236); */
 }
 
+.findContainer__filters>div {
+    position: relative;
+}
+
 .findContainer__filters__select {
-    padding: 15px 10px;
+    padding: 15px;
     background: rgb(236, 236, 236);
     border: none;
     border-radius: 20px;
     cursor: pointer;
+    appearance: none;
 }
 
-/* .findContainer__filters__select option {
-    padding: 50px;
+.findContainer__filters__select option {
+    padding: 15px;
+    background-color: white;
     cursor: pointer;
-} */
+}
+
+.findContainer__filters__select__arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 10%;
+    font-weight: 700;
+    font-size: large;
+}
 
 .findContainer__filters>p {
     color: #339BA9;
     font-weight: 500;
     cursor: pointer;
+    margin-bottom: 0;
 }
 
 .findContainer__filters+hr {
@@ -99,6 +114,10 @@
     font-size: 20px;
 }
 
+.findContainer__eventCard__parent__child__content__info>div>p {
+    margin-bottom: 0;
+}
+
 .findContainer__eventCard__parent__child__content__info .star {
-    color: gold;
+    color: crimson;
 }

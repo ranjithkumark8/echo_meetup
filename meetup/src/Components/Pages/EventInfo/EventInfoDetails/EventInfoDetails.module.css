@@ -1,15 +1,29 @@
-.evetInfoDetails__details_container{
-    margin : 0% 14%;
-    padding : 5% 16px;
+.evetInfoDetails__details_container {
+    padding: 5% 16px;
     line-height: 28px;
     background-color: whitesmoke;
 }
-p{
+
+p {
     font-size: 16px;
     margin-top: 20px;
 }
-ol{
+
+ol {
     font-size: 16px;
     margin-top: 20px;
     margin-left: 2%;
 }
+
+@media only screen and (max-width: 600px) {
+    .event_image {
+        width: 200px;
+        height: 100px;
+    }
+
+    .evetInfoDetails__details_container {
+        margin: 0% 7%;
+    }
+}
+
+@media only screen and (min-width: 992px) {}

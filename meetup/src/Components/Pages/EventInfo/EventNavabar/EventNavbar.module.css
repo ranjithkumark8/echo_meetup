@@ -1,5 +1,5 @@
-.eventInfo__navabar_container{
-    position: fixed;
+.eventInfo__navabar_container {
+    position: sticky;
     bottom: 0px;
     width: 100%;
     display: flex;
@@ -8,51 +8,115 @@
     padding: 20px 20px;
     flex-direction: row;
     align-items: center;
+    z-index: 1;
 }
-.eventInfo__navbar_attend_online_button{
+
+.eventInfo__navbar_attend_online_button {
     background-color: #F65858;
-    padding: 15px 30px ;
+    padding: 15px 30px;
     font-size: 16px;
     line-height: 16px;
     border-radius: 10px;
     margin-left: 70px;
     height: 50px;
     color: white;
-    
+
 }
-.eventInfo__navbar_star_icon{
-    border : 1px solid silver;
+
+.eventInfo__navbar_star_icon {
+    border: 1px solid silver;
     padding: 10px 10px 10px 10px;
     border-radius: 5px;
     margin-left: 70px;
     height: 40px;
     text-align: center;
 }
-.eventInfo__navbar_modal{
+
+.eventInfo__navbar_modal {
     padding: 20px 30px 30px 20px;
-  
+
 }
-.eventInfo__host_image{
+
+.eventInfo__host_image {
     height: 80px;
     border-radius: 50%;
     width: 80px;
 }
-.response_div{
-    border : 1px solid silver;
+
+.response_div {
+    border: 1px solid silver;
     border-radius: 10px;
-    padding: 10px 30px 20px 10px ;
+    padding: 10px 30px 20px 10px;
     line-height: 28px;
-    margin-top: 50px  ;
+    margin: 50px auto;
     width: 300px;
-    margin-left: 60px;
     margin-bottom: 40px;
 }
-.addToCalenderDiv{
-    border : 1px solid #0098AB;
+
+.addToCalenderDiv {
+    border: 1px solid #0098AB;
     padding: 10px 20px;
     border-radius: 8px;
     width: 150px;
     margin-left: 130px;
-    color : #0098AB;
+    color: #0098AB;
     margin-top: 30px;
 }
+
+.event_goingDiv {
+    display: flex;
+    justify-content: space-between
+}
+
+.modal_para {
+    margin-left: 50px
+}
+
+@media only screen and (max-width: 600px) {
+    .addToCalenderDiv {
+        padding: 10px 2px;
+        width: 130px;
+        margin-left: 20px;
+        margin-top: 10px;
+        text-align: center;
+    }
+
+    .eventInfo__navabar_container {
+        flex-direction: column;
+        height: 200px;
+        padding: 0px 0px;
+        justify-content: center;
+    }
+
+    .modal_para {
+        margin-left: 20px
+    }
+
+    .response_div {
+        width: 150px;
+    }
+
+    .event_goingDiv {
+        flex-direction: column;
+        margin-right: 80px;
+        /* align-items: left; */
+        /* justify-content: center; */
+    }
+
+    .eventInfo__navbar_attend_online_button {
+        margin-left: 5px;
+        margin-top: 20px;
+    }
+
+    .eventInfo__navbar_star_icon {
+        margin-left: 5px;
+        margin-top: 10px;
+        width: 50px;
+    }
+
+    .navbar__left {
+        visibility: hidden;
+    }
+}
+
+@media only screen and (min-width: 992px) {}

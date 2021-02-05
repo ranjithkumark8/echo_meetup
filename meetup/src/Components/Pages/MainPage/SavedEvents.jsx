@@ -2,7 +2,7 @@ import React from "react"
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 import styles from "./eventCommon.module.css"
-import { Link , useHistory} from "react-router-dom"
+import { Link } from "react-router-dom"
 import { FiShare, FiStar } from "react-icons/fi"
 import { FaStar, FaFacebook, FaTwitter, FaLinkedin, FaCopy } from "react-icons/fa";
 import Modal from "react-modal"
@@ -11,15 +11,11 @@ import { IoIosVideocam } from "react-icons/io"
 import { useDispatch } from "react-redux";
 import { eventFetch, favoriteEventUpdate } from "../../../Redux/EventRedux/eventAction";
 
-const OutdoorEvents = ({ specificEvents }) => {
+const SavedEvents = ({specificEvents}) => {
     const [isModelOpen, setIsModelOpen] = React.useState(false)
     const [copied, setCopied] = React.useState(false)
-    const history = useHistory();
     const dispatch = useDispatch()
-            
-    const handleClick =(id) => {
-        history.push(`/event/${id}`)
-    }
+    // console.log(specificEvents, "saved events ")
     const responsive = {
         superLargeDesktop: {
             // the naming can be any, depends on you.
@@ -57,17 +53,18 @@ const OutdoorEvents = ({ specificEvents }) => {
                 dispatch(eventFetch())
             }})
     }
+
     return (
         <div style={{ margin: "auto", width: "70%" }}>
             <div className={styles.heading}>
-                <h1>Explore the outdoors</h1>
-                <Link to={`/find?keyword=near_by`} className={styles.heading_allEvents}>See all</Link>
+                <h1>Saved Events</h1>
+                {/* <Link to={`/find?keyword=near_by`} className={styles.heading_allEvents}>See all</Link> */}
             </div>
             <Carousel responsive={responsive} removeArrowOnDeviceType={["tablet", "mobile"]} >
                 {specificEvents.map((item) => (
-                    <div key={item.id} className={styles.event_card} >
+                    <div key={item.id} className={styles.event_card}>
                         {item.is_online_event && <div className={styles.event_card_online}><IoIosVideocam /> Online event</div>}
-                        <img src={item.img} alt={item.header} onClick = {() =>handleClick(item.id)}/>
+                        <img src={item.img} alt={item.header} />
                         <div className={styles.event_card_info}>
                             <div className={styles.event_card_date}>{item.date}</div>
                             <div className={styles.event_card_header}>{item.header}</div>
@@ -143,4 +140,5 @@ const OutdoorEvents = ({ specificEvents }) => {
         </div>
     )
 }
-export { OutdoorEvents }
+
+export {SavedEvents}
