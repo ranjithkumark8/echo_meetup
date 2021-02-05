@@ -54,9 +54,9 @@ const EventPage = (props) => {
             <TechEvents specificEvents={specificEvents} />
         )
     } else if (props.event === "saved") {
-        console.log(savedEvents, "saved events data in event page")
+        // console.log(savedEvents, "saved events data in event page")
         if (savedEvents.length > 0) {
-            console.log(savedEvents.length, "events pages")
+            // console.log(savedEvents.length, "events pages")
             return (
                 <SavedEvents specificEvents={savedEvents}/>
             )

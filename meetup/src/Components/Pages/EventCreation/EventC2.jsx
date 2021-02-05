@@ -20,15 +20,15 @@ const EventC2 = () => {
                 <div style={{ backgroundColor: "lightgrey ", width: "60%", height: "15px" }} ></div>
             </div>
             <div className={styles.eve1} >
-                <h5>Step 2 out of five</h5>
+                <h5>Step 2 of 5</h5>
                 <h1 style={{ fontSize: "40px" }}>Choose a few topics that describe <br /> your group's interests</h1>
-                <h4>Be specific! This will help us promote your group to the right people. You can choose up to <br /> 15 topics.</h4>
+                <h4>Be specific! This will help us promote your group to the right people.</h4>
 
             </div>
             <div className={styles.eve2} >
                 <div>
                     <button value={"nearby"} onClick={(e) => handleInput(e, 'value')}>Near-By</button>
-                    <button value={"Carrer & Business"} onClick={(e) => handleInput(e, 'value')} >Carrer & Business</button>
+                    <button value={"career & Business"} onClick={(e) => handleInput(e, 'value')} >Career & Business</button>
                     <button value={"Outdoors & Adventure"} onClick={(e) => handleInput(e, 'value')} >Outdoors & Adventure</button>
 
                 </div>

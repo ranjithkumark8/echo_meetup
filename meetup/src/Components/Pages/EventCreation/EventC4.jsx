@@ -16,7 +16,7 @@ const EventC4 = () => {
                 <div style={{ backgroundColor: "lightgrey ", width: "26%", height: "15px" }} ></div>
             </div>
             <div className={styles.eve1} >
-                <h5>Step 4 out of five</h5>
+                <h5>Step 4 of 5</h5>
                 <h1>Now describe what your group <br />will be about</h1>
                 <h4>People will see this when we promote your group but you’ll be able to add to it later, too.</h4>
                 <br />
@@ -41,7 +41,7 @@ const EventC4 = () => {
             </div>
 
             <div className={styles.eve1_button}>
-                <Link to="/start/guidlines" ><button>Next</button></Link>
+                <Link to="/start/guidelines" ><button>Next</button></Link>
             </div>
             <div style={{ clear: "both" , marginBottom:"30px" }}></div>
         </div>
