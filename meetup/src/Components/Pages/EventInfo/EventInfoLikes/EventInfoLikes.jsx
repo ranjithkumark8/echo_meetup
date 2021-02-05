@@ -49,7 +49,7 @@ const EventInfoLikes = () => {
         <div className = {Styles.eventInfoLikes__container}>
             <h3 style = {{fontSize : "20px", marginTop : "20px",fontWeight : 'bold'}}>Comments({eventInfoData.comments ? eventInfoData.comments.length : 0})</h3>
             {eventInfoData.comments?.map(e => (
-              <Comment className = {Styles.comment}
+              <Comment key = {e.id} className = {Styles.comment}
               actions ={actions}
               author = {e.name}
               avatar ={
@@ -62,7 +62,7 @@ const EventInfoLikes = () => {
                  {e.comment}
                   </p>}
               datetime={
-                  <Tooltip title={moment().format('YYYY-MM-DD HH:mm:ss')}>
+                  <Tooltip key = {e.id} title={moment().format('YYYY-MM-DD HH:mm:ss')}>
                   <span>{moment().fromNow()}</span>
                   </Tooltip>
               }

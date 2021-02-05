@@ -61,7 +61,9 @@ body {
     text-align: center ;
     border: 1px solid gray ;
 }
-
+.picturesAndSearch{
+    margin-left: 10%;
+}
 .navbar_search >div:nth-child(2){
     width: 200px;
     margin-left: 0px;

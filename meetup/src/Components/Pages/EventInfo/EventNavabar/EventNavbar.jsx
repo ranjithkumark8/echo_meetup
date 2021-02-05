@@ -7,10 +7,11 @@ import { ImCross } from "react-icons/im";
 import { FaFacebookSquare,FaTwitter,FaLinkedin} from "react-icons/fa";
 import { useDispatch } from 'react-redux';
 import { putAttendeeData } from '../../../../Redux/EventInformationRedux/action';
+import { EventInfoContext } from '../../../../Context/EventInfoContext';
 
 const EventNavbar = ({id ,attendees,img ,header , date}) => {
     const [modalVisible , setModalVisible] = React.useState(false)
-    const [isGoing , setIsGoing] = React.useState(false)
+    const [isGoing , setIsGoing] = React.useContext(EventInfoContext)
     const dispatch = useDispatch();
     console.log(attendees , id)
     const handleClick = () => {
@@ -21,12 +22,13 @@ const EventNavbar = ({id ,attendees,img ,header , date}) => {
             const {name} = signUp[signUp.length -1]
             const attendeeData = {
                 name,
+                img : "https://www.shutterstock.com/image-photo/side-view-young-ethnic-man-earphones-1687201528"
             }
-            attendees = [...attendees,attendeeData]
+            attendees = [attendeeData,...attendees]
             dispatch(putAttendeeData(id,attendees))
         }
         else{
-            attendees.pop();
+            attendees.shift();
             dispatch(putAttendeeData(id,attendees))
         }
     }

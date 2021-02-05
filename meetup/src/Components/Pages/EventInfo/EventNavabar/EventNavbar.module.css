@@ -1,5 +1,5 @@
 .eventInfo__navabar_container{
-    position: fixed;
+    position: sticky ;
     bottom: 0px;
     width: 100%;
     display: flex;
@@ -101,3 +101,6 @@
         visibility: hidden;
     }
 }
+@media only screen and (min-width: 992px) {
+    
+} 

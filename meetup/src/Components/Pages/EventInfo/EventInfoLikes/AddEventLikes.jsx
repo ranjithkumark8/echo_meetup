@@ -3,7 +3,7 @@ import {MdSend } from "react-icons/md";
 import { useDispatch, useSelector } from 'react-redux';
 import { putCommentsData } from '../../../../Redux/EventInformationRedux/action';
 import Styles from './AddEventLikes.module.css'
-
+import {v4 as uuid} from 'uuid'
 
 const AddEventLikes = () => {
   
@@ -15,6 +15,7 @@ const AddEventLikes = () => {
         const signUp = JSON.parse(localStorage.getItem("signUpInfo"))
         const {name} = signUp[signUp.length -1]
         const particularComment = {
+            id : uuid(),
             name,
             comment :comment 
         }

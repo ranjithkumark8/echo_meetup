@@ -56,3 +56,29 @@
 .clear {
     clear: both;
 }
+.footer_main{
+    display: flex;
+
+}
+@media only screen and (max-width: 992px) {
+    .footer_box{
+
+    }
+    .footer_left{
+        flex-direction: column;
+    }
+    .footer_main{
+        flex-direction: column;
+    }
+} 
+@media only screen and (max-width: 600px){
+    .footer_box{
+
+    }
+    .footer_left{
+        flex-direction: column;
+    }
+    .footer_main{
+        flex-direction: column;
+    }
+}

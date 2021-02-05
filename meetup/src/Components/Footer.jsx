@@ -13,7 +13,7 @@ const Footer = ( ) => {
                         <Link to="/" style={{color : "white"  }}>Start a new group</Link>
                         <div style={{height : "0.5px" , backgroundColor :"gray" , margin:"30px 0px" }} ></div>
                     </div>
-                    <div style ={{display : "flex"}} > 
+                    <div className = {styles.footer_main} > 
                         <div className={styles.footer_left}>
                             <div>
                                 <ul>

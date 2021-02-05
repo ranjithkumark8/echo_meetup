@@ -43,6 +43,16 @@ body{
     width: 80px;
     margin-top: 30px;
 }
+.isGoingEventDiv{
+    height: 60px;
+    padding : 10px;
+    text-align: center;
+    background-color: #0e6c81;
+    color:  white;
+    font-size: 20px;
+    padding-top: 10px;
+    font-weight: 500;
+}
 @media only screen and (max-width: 600px){
     .eventInfo__hosting_header{
         margin : 2%  ;
@@ -67,3 +77,6 @@ body{
         
     }
 }
+@media only screen and (min-width: 992px) {
+    
+} 
