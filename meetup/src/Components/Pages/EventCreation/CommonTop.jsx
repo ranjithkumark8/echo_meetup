@@ -8,6 +8,9 @@ const CommonTop = () => {
     const handleRedirect = () => {
         history.push("/home")
     }
+    React.useEffect(() => {
+        document.title = "Create a Meetup group - Meetup"
+    })
     return (
         <div>
             <div>

@@ -16,6 +16,9 @@ const Signup = () => {
     useEffect(() => {
         window.scrollTo(0, 0)
     }, [])
+    useEffect(() => {
+        document.title = "Create a Meetup Account"
+    })
     return (
         <div>
             <div className={Styles.signup__header}>
