@@ -13,7 +13,7 @@ const EventC1 = () => {
                 <div style={{ backgroundColor: "lightgrey ", width: "84%", height: "15px" }} ></div>
             </div>
             <div className={styles.eve1} >
-                <h5>Step 1 out of six</h5>
+                <h5>Step 1 out of five</h5>
                 <h1>First, set your group’s location.</h1>
                 <h4>Meetup groups meet locally, in person and online. We'll connect you with people in your
                 <br /> area, and more can join you online.</h4>
@@ -22,6 +22,8 @@ const EventC1 = () => {
             <div className={styles.eve1_button}>
                 <Link to="/start/topics" ><button>Next</button></Link>
             </div>
+            <div style={{ clear: "both" , marginBottom:"30px" }}></div>
+
         </div>
     )
 }
