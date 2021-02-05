@@ -76,40 +76,37 @@
     .addToCalenderDiv {
         padding: 10px 2px;
         width: 130px;
-        margin-left: 20px;
+        margin-left: 80px;
         margin-top: 10px;
         text-align: center;
     }
 
     .eventInfo__navabar_container {
         flex-direction: column;
-        height: 200px;
-        padding: 0px 0px;
-        justify-content: center;
+        height: 100px;
+        padding-top: 20px;
+        padding-bottom: 100px;
+        justify-content:center;}
+    
+    .modal_para{
+        margin-left : 20px
     }
-
-    .modal_para {
-        margin-left: 20px
+    .response_div{
+        width: 200px;
     }
-
-    .response_div {
-        width: 150px;
-    }
-
-    .event_goingDiv {
-        flex-direction: column;
-        margin-right: 80px;
-        /* align-items: left; */
-        /* justify-content: center; */
+    .event_goingDiv{
+        height: fit-content;
+        align-items: baseline;
+        margin-right: 0px;
+        
     }
 
     .eventInfo__navbar_attend_online_button {
         margin-left: 5px;
         margin-top: 20px;
     }
-
-    .eventInfo__navbar_star_icon {
-        margin-left: 5px;
+    .eventInfo__navbar_star_icon{
+        margin-left: 30px;
         margin-top: 10px;
         width: 50px;
     }
@@ -117,6 +114,15 @@
     .navbar__left {
         visibility: hidden;
     }
+    .eventInfo__navbar_attend_online_button{
+        margin-left: 30px;
+    }
 }
-
-@media only screen and (min-width: 992px) {}
+@media only screen and (max-width: 992px) {
+    .navbar__left{
+        font-size: 12px;
+    }
+    .event_goingDiv{
+        margin-left: 30px;
+    }
+} 

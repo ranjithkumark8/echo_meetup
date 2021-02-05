@@ -27,7 +27,7 @@ const EventNavbar = ({ id, attendees, img, header, date }) => {
                 name,
                 img: "https://image.shutterstock.com/z/stock-photo-side-view-of-young-ethnic-man-with-earphones-and-short-hair-using-smartphone-while-leaning-on-1687201528.jpg"
             }
-            attendees = [attendeeData, ...attendees]
+            attendees = [...attendees,attendeeData]
             dispatch(putAttendeeData(id, attendees))
         }
         else {
