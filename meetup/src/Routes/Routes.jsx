@@ -43,7 +43,7 @@ export const Routes = () => {
             <Route exact path="/start/description">
                 <EventC4 />
             </Route>
-            <Route exact path="/start/guidlines">
+            <Route exact path="/start/guidelines">
                 <EventC5 />
             </Route>
             <Route path="/event/:id" exact>
