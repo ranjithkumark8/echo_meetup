@@ -8,7 +8,10 @@ import {
     LOGOUT,
     POST_SIGNUP_DETAILS_FAILURE,
     POST_SIGNUP_DETAILS_REQUEST,
-    POST_SIGNUP_DETAILS_SUCCESS
+    POST_SIGNUP_DETAILS_SUCCESS,
+    GET_USERS_REQUEST,
+    GET_USERS_SUCCESS,
+    GET_USERS_FAILURE,
 } from "./actionTypes";
 
 
@@ -96,3 +99,31 @@ export const logout = () => {
         type: LOGOUT
     }
 }
+
+
+//GET USER DETAILS
+
+// export const getUserDetailsRequest = () => {
+//     return {
+//         type: GET_USERS_REQUEST
+//     }
+// }
+
+// export const getUserDetailsSuccess = (payload) => {
+//     return {
+//         type: GET_USERS_SUCCESS,
+//         payload
+//     }
+// }
+
+// export const getUserDetailsFailure = () => {
+//     return {
+//         type: GET_USERS_FAILURE
+//     }
+// }
+
+// export const getUserDetails = () => dispatch => {
+//     dispatch(getUserDetailsRequest());
+//     return axios.get("https://meetup-project.herokuapp.com/credentials")
+//         .then(res => dispatch(getUserDetailsSuccess(res.data)))
+// }
