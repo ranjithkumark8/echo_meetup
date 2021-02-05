@@ -30,12 +30,14 @@ const eventReducer = (state = initialData, {
       return {
         ...state,
         eventData: payload.data,
+        isLoading:false,
         savedEvents: payload.data.filter((item) => item.isStar === true)
       };
     case EVENT_FAILURE:
       return {
         ...state,
         isError: true,
+        isLoading:false,
         error: payload.error,
       };
     case FAVORITE_EVENT_REQUEST:

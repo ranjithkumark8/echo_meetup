@@ -8,7 +8,14 @@ import { YourEvents } from "./YourEvents";
 
 const MainPage = () => {
     const isLoggedin = useSelector(state => state.authReducer.isLoggedin);
-
+    const isLoading = useSelector(state => state.eventReducer.isLoading)
+    useEffect(() => {
+        if (isLoading) {
+            document.title = "Hold on for a minute"
+        } else {
+            document.title="Meetup - We are what we do"
+        }
+    })
 
     useEffect(() => {
         window.scrollTo(0, 0)
