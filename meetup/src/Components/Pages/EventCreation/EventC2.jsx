@@ -9,6 +9,7 @@ const EventC2 = () => {
 
     const handleInput = (e) => {
         setCategory(e.target.value)
+       
 
     }
     return (

@@ -21,6 +21,9 @@
 .footer_right  span {
     margin-right: 30px;
 }
+.footer_left h4 , .footer_right h4 {
+    color: #fff;
+}
 .footer_left>div {
     width: 220px;
     height: 220px;

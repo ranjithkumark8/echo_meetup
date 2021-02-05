@@ -24,6 +24,9 @@ export const NavBar = () => {
     const handleLogout = () => {
         dispatch(logout());
     }
+    const handleViewProfile = () => {
+        history.push("/profile")
+    }
 
     const handleSavedEvents = () => {
         history.push("/saved-events");
@@ -55,7 +58,7 @@ export const NavBar = () => {
                         <p>Your groups</p>
                         <p>Your events</p>
                         <hr />
-                        <p>View profile</p>
+                        <p onClick={handleViewProfile}>View profile</p>
                         <p>Settings</p>
                         <p>Help</p>
                         <p onClick={handleLogout}>Log out</p>

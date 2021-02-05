@@ -33,7 +33,6 @@ const LandingPage = () => {
                 </div>
 
                 <div style={{ clear: "both" }}></div>
-
                 <br />
                 <div style={{ display: "flex", justifyContent: "center" }}>
                     <div className={styles.navbar_search}>
