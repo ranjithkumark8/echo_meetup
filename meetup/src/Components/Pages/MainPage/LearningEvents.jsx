@@ -2,7 +2,7 @@ import React from "react"
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 import styles from "./eventCommon.module.css"
-import { Link , useHistory } from "react-router-dom"
+import { Link, useHistory } from "react-router-dom"
 import { FiShare, FiStar } from "react-icons/fi"
 import { FaStar, FaFacebook, FaTwitter, FaLinkedin, FaCopy } from "react-icons/fa";
 import Modal from "react-modal"
@@ -45,19 +45,21 @@ const LearningEvents = ({ specificEvents }) => {
     const handleModelCopy = () => {
         setCopied(true)
     }
-    
-    const handleClick =(id) => {
+
+    const handleClick = (id) => {
         history.push(`/event/${id}`)
-        }
-    
-        const handleSaved = (id, isStar) => {
-            // console.log(id, isStar)
-            let star = !isStar
-            dispatch(favoriteEventUpdate(id,star))
-                .then((res) => { if(res.success){
+    }
+
+    const handleSaved = (id, isStar) => {
+        // console.log(id, isStar)
+        let star = !isStar
+        dispatch(favoriteEventUpdate(id, star))
+            .then((res) => {
+                if (res.success) {
                     dispatch(eventFetch())
-                }})
-        }
+                }
+            })
+    }
     return (
         <div style={{ margin: "auto", width: "70%" }}>
             <div className={styles.heading}>
@@ -68,7 +70,7 @@ const LearningEvents = ({ specificEvents }) => {
                 {specificEvents.map((item) => (
                     <div key={item.id} className={styles.event_card} >
                         {item.is_online_event && <div className={styles.event_card_online}><IoIosVideocam /> Online event</div>}
-                        <img src={item.img} alt={item.header} onClick = {() =>handleClick(item.id)}/>
+                        <img src={item.img} alt={item.header} onClick={() => handleClick(item.id)} />
                         <div className={styles.event_card_info}>
                             <div className={styles.event_card_date}>{item.date}</div>
                             <div className={styles.event_card_header}>{item.header}</div>

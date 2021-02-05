@@ -7,13 +7,14 @@ import { ImCross } from "react-icons/im";
 import { FaFacebookSquare, FaTwitter, FaLinkedin } from "react-icons/fa";
 import { useDispatch, useSelector } from 'react-redux';
 import { putAttendeeData } from '../../../../Redux/EventInformationRedux/action';
+import { EventInfoContext } from '../../../../Context/EventInfoContext';
+
 
 const EventNavbar = ({ id, attendees, img, header, date }) => {
     const [modalVisible, setModalVisible] = React.useState(false)
-    const [isGoing, setIsGoing] = React.useState(false)
+    const [isGoing, setIsGoing] = React.useContext(EventInfoContext)
     const dispatch = useDispatch();
     const loginDetails = useSelector(state => state.authReducer.loginDetails);
-
     console.log(attendees, id)
     const handleClick = () => {
         setModalVisible(true)
@@ -24,13 +25,17 @@ const EventNavbar = ({ id, attendees, img, header, date }) => {
             const { name } = loginDetails;
             const attendeeData = {
                 name,
+                img: "https://image.shutterstock.com/z/stock-photo-side-view-of-young-ethnic-man-with-earphones-and-short-hair-using-smartphone-while-leaning-on-1687201528.jpg"
             }
-            attendees = [...attendees, attendeeData]
+            attendees = [attendeeData, ...attendees]
             dispatch(putAttendeeData(id, attendees))
         }
         else {
-            attendees.pop();
+            attendees.shift();
             dispatch(putAttendeeData(id, attendees))
+            // else {
+            // attendees.pop();
+            // dispatch(putAttendeeData(id, attendees))
         }
     }
 

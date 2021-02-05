@@ -50,6 +50,7 @@ const HealthEvents = ({ specificEvents }) => {
     const handleClick =(id) => {
         history.push(`/event/${id}`)
     }
+
     const handleSaved = (id, isStar) => {
         // console.log(id, isStar)
         let star = !isStar

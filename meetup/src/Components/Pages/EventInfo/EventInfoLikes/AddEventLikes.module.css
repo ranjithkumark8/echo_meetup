@@ -1,44 +1,52 @@
-.addEventLikes__Container{
+.addEventLikes__Container {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    margin : 2% 40% 15% 0%;
-    
+    margin: 2% 40% 15% 0%;
+
 }
-.addEventLikes__attendes_image{
+
+.addEventLikes__attendes_image {
     height: 80px;
     border-radius: 40px;
     width: 80px;
     margin-left: 5px;
     margin-right: 40px;
 }
-textarea{
+
+textarea {
     border-radius: 8px;
-    padding: 5px 10px ;
-    border : 1px solid silver
+    padding: 5px 10px;
+    border: 1px solid silver
 }
 
-.send_icon{
-    margin-left: 30px ;
+.send_icon {
+    margin-left: 30px;
     font-size: 30px;
     color: grey;
 }
-@media only screen and (max-width: 600px){
-    .addEventLikes__Container{
+
+@media only screen and (max-width: 600px) {
+    .addEventLikes__Container {
         /* flex-direction: column; */
         align-items: flex-start;
-        margin :10% 0%;
+        margin: 10% 0%;
     }
-    textarea{
+
+    textarea {
         width: 150px;
         margin-right: 0px;
     }
-    .addEventLikes__attendes_image{
+
+    .addEventLikes__attendes_image {
         margin-left: 0px;
         margin-right: 0px;
     }
-    .send_icon{
+
+    .send_icon {
         margin-top: 20px;
         margin-left: 10px;
     }
 }
+
+@media only screen and (min-width: 992px) {}

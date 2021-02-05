@@ -42,6 +42,16 @@
     width: 80px;
    
 }
+.inputSearch{
+    border : none;
+    padding : 10px;
+
+}
+input:focus{
+    border: white;
+    outline: none;
+}
+
 .ModalContainer{
     border-radius: 20px;
     display: flex;
