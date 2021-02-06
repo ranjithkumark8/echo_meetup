@@ -11,6 +11,7 @@ function App() {
 
       <Routes />
       <Footer />
+      {/* <Profile /> */}
 
     </div>
   );

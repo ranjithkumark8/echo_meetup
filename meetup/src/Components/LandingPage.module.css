@@ -1,85 +1,219 @@
 body {
-    font-family: 'Graphik Meetup',-apple-system,BlinkMacSystemFont,Roboto,Helvetica,Arial,sans-serif;
-}
-.top_image {
-    display: flex;
-    margin-bottom: 20px;
-}
-.lp_image_div {
-    width:48% ;
-    height:400px ;
-}
-.lp_image_left {   
-    margin-left: 80px ;
-    margin-top: 60px;
-    width: 38%;
+    font-family: 'Graphik Meetup', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif;
 }
 
-.lp_image_left h1 {
-    font-size: 56px;
-    line-height: 1.24;
-    padding-top: 8px;
-    color: rgb(33, 33, 33);
-    font-weight: 750;
-}
-.lp_image_left button {
-    background-color: rgb(246, 88, 88);
-    font-size: 16px;
-    color: rgb(255, 255, 255);
-    margin-top: 20px;
-    padding: 16px 24px;
-    border-radius: 6px;
-    border: none;
-}
-.navbar_top {
-    width:98% ; 
-    height:60px
-}
-.navbar_top img {
-    width: 120px;
-    padding: 16px 20px;
-}
-.navbar_login  {
-    float: right; 
-    padding: 16px 20px;
-}
-.navbar_login :any-link {
-    margin: 10px;
-    color: black;
-    text-decoration: none;
-}
-.navbar_login :any-link:hover {
-    color: rgb(0, 130, 148) ;
-}
-.navbar_search {
-    display: flex;
-    margin-bottom:30px
-}
-.navbar_search * {
-    height: 40px;
-}
-.navbar_search input , .navbar_search >div:nth-child(2){
-    width: 500px;
-    margin-left: 120px;
-    border-radius: 4px;
-    text-align: center ;
-    border: 1px solid gray ;
+@media only screen and (min-width : 968px) {
+    .top_image {
+        display: flex;
+        margin-bottom: 20px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .lp_image_div {
+        height: 400px;
+    }
+
+    .lp_image_left {
+        margin-left: 80px;
+        margin-top: 60px;
+        width: 38%;
+    }
+
+    .lp_image_left h1 {
+        font-size: 56px;
+        line-height: 1.24;
+        padding-top: 8px;
+        color: rgb(33, 33, 33);
+        font-weight: 750;
+    }
+
+    .lp_image_left button {
+        background-color: rgb(246, 88, 88);
+        font-size: 16px;
+        color: rgb(255, 255, 255);
+        margin-top: 20px;
+        padding: 16px 24px;
+        border-radius: 6px;
+        border: none;
+        cursor: pointer;
+    }
+
+    .navbar_top {
+        width: 95%;
+        height: 60px;
+        margin: auto;
+    }
+
+    .navbar_top img {
+        width: 120px;
+        padding: 16px 20px;
+    }
+
+    .navbar_login {
+        float: right;
+        padding: 16px 20px;
+    }
+
+    .navbar_login :any-link {
+        margin: 10px;
+        color: black;
+        text-decoration: none;
+    }
+
+    .navbar_login :any-link:hover {
+        color: rgb(0, 130, 148);
+    }
+
+    .navbar_search {
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 30px
+    }
+
+    .navbar_search * {
+        height: 40px;
+    }
+
+    .navbar_search input,
+    .navbar_search>div:nth-child(2) {
+        width: 500px;
+        margin-left: 120px;
+        border-radius: 4px;
+        text-align: center;
+        border: 1px solid gray;
+    }
+
+    .navbar_search>div:nth-child(2) {
+        width: 200px;
+        margin-left: 0px;
+        border-left: 0px;
+        /* padding: 6px; */
+    }
+
+    .navbar_search button {
+        margin-left: 20px;
+        border: 1px solid rgb(0, 130, 148);
+        width: 150px;
+        border-radius: 7px;
+        cursor: pointer;
+    }
+
+    .navbar_search>div>button:hover {
+        background-color: rgb(0, 130, 148);
+    }
+
+
 }
 
-.navbar_search >div:nth-child(2){
-    width: 200px;
-    margin-left: 0px;
-    border-left: 0px;
-    /* padding: 6px; */
-}
+@media only screen and (min-width : 568px) and (max-width : 968px) {
+    .top_image {
+        display: flex;
+        margin-bottom: 20px;
+        flex-direction: column;
+        align-items: center;
+    }
 
-.navbar_search button {
-    margin-left: 20px;
-    border : 1px solid rgb(0, 130, 148);
-    width: 150px;
-    border-radius: 7px;
-}
+    .lp_image_div {
+        min-width: 48%;
+        height: 400px;
 
-.navbar_search > div> button:hover{
-    background-color: rgb(0, 130, 148);
+    }
+
+    .lp_image_left {
+        margin-left: 40px;
+        margin-top: 30px;
+        width: 75%;
+        font-size: small;
+    }
+
+    .lp_image_left h1 {
+        font-size: 56px;
+        line-height: 1.24;
+        padding-top: 8px;
+        color: rgb(33, 33, 33);
+        font-weight: 750;
+    }
+
+    .lp_image_left button {
+        background-color: rgb(246, 88, 88);
+        font-size: 16px;
+        color: rgb(255, 255, 255);
+        margin-top: 20px;
+        padding: 16px 24px;
+        border-radius: 6px;
+        border: none;
+    }
+
+    .navbar_top {
+        width: 98%;
+        height: 60px
+    }
+
+    .navbar_top img {
+        width: 120px;
+        padding: 16px 20px;
+    }
+
+    .navbar_login {
+        float: right;
+        padding: 16px 20px;
+    }
+
+    .navbar_login :any-link {
+        margin: 10px;
+        color: black;
+        text-decoration: none;
+    }
+
+    .navbar_login :any-link:hover {
+        color: rgb(0, 130, 148);
+    }
+
+    .navbar_search {
+        display: flex;
+        margin-bottom: 30px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .navbar_search * {
+        height: 40px;
+        /* margin-left: 50px; */
+    }
+
+
+    .navbar_search input,
+    .navbar_search>div:nth-child(2) {
+        width: 500px;
+        border-radius: 4px;
+        text-align: center;
+        border: 1px solid gray;
+    }
+
+    .navbar_search input {
+        max-width: 400px;
+        min-width: 250px;
+    }
+
+    .navbar_search>div:nth-child(2) {
+        margin: 20px 0;
+        width: 200px;
+        text-align: center;
+        /* border-left: 0px; */
+        /* padding: 6px; */
+    }
+
+    .navbar_search button {
+        border: 1px solid rgb(0, 130, 148);
+        width: 150px;
+        border-radius: 7px;
+    }
+
+    .navbar_search>div>button:hover {
+        background-color: rgb(0, 130, 148);
+    }
+
+
 }

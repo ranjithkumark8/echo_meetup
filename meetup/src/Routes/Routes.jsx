@@ -10,6 +10,7 @@ import { Find } from "../Components/Pages/Find/Find";
 import { LandingPage } from "../Components/Pages/LandingPage/LandingPage";
 import { Login } from "../Components/Pages/Login/Login";
 import { MainPage } from "../Components/Pages/MainPage/MainPage";
+import { Profile } from "../Components/Pages/Profile/Profile";
 import { Signup } from "../Components/Pages/SignUp/Signup";
 
 
@@ -48,6 +49,9 @@ export const Routes = () => {
             </Route>
             <Route path="/event/:id" exact>
                 <EventInfo/>
+            </Route>
+            <Route path="/profile" exact>
+                <Profile/>
             </Route>
             <Route>
                 <div>Error, Page Not Found</div>
