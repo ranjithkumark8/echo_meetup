@@ -16,11 +16,11 @@
 }
 
 .eventInfo__sidebar_container {
-    max-width: 400px;
-    /* margin-right: 10%; */
+    max-width: 350px;
+    margin-right: 10%;
     /* padding: 20px; */
     margin: 80px 0;
-    margin-left: 50px;
+    /* margin-left: 10px; */
     position: sticky;
     top: 15%;
     left: 20%;
@@ -31,8 +31,9 @@
         visibility: hidden;
     }
 }
+
 @media only screen and (max-width: 992px) {
-    .eventInfo__sidebar_container{
+    .eventInfo__sidebar_container {
         display: none;
     }
-} 
+}

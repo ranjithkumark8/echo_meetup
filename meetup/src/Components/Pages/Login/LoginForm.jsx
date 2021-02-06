@@ -40,7 +40,9 @@ const LoginForm = () => {
             setWrongCredentials(true);
         }
     }
-
+    useEffect(() => {
+        document.title ="Login | Meetup"
+    })
     useEffect(() => {
         if (Object.keys(loginDetails).length !== 0) {
             handleCheck()

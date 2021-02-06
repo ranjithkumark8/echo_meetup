@@ -7,6 +7,9 @@ const Login = () => {
     useEffect(() => {
         window.scrollTo(0, 0)
     }, [])
+    useEffect(() => {
+        document.title ="Login | Meetup"
+    })
     return (
         <div>
             <LoginHeader />

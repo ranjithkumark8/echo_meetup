@@ -45,7 +45,7 @@ body {
         margin: auto;
     }
 
-    .navbar_top img {
+    .navbar_top svg {
         width: 120px;
         padding: 16px 20px;
     }
@@ -150,7 +150,7 @@ body {
         height: 60px
     }
 
-    .navbar_top img {
+    .navbar_top svg {
         width: 120px;
         padding: 16px 20px;
     }
@@ -216,4 +216,11 @@ body {
     }
 
 
+}
+
+@media only screen and (min-width:300px) and (max-width:560xp){
+    .navbar_top img {
+        width: 120px;
+        /* padding: 16px 20px; */
+    }
 }

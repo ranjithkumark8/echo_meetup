@@ -19,6 +19,14 @@ const EventInfo = () => {
     const { id } = useParams();
     const isLoggedin = useSelector(state => state.authReducer.isLoggedin);
     const [isGoing, setIsGoing] = React.useContext(EventInfoContext)
+    const isLoading = useSelector(state => state.eventInfo.isLoading)
+    React.useEffect(() => {
+        if (isLoading) {
+            document.title = "Hold on for a minute"
+        } else {
+            document.title = eventInfoData.header
+        }
+    })
 
     console.log(id)
     React.useEffect(() => {
