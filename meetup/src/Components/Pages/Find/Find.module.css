@@ -1,0 +1,124 @@
+.findContainer {
+    width: 70%;
+    margin: auto;
+}
+
+.findContainer__filters {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 400px;
+    padding: 15px 0;
+    /* border-bottom: 1px solid rgb(236, 236, 236); */
+}
+
+.findContainer__filters>div {
+    position: relative;
+}
+
+.findContainer__filters__select {
+    padding: 15px;
+    background: rgb(236, 236, 236);
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    appearance: none;
+    width: 120px;
+}
+
+.findContainer__filters__select option {
+    padding: 15px;
+    background-color: white;
+    cursor: pointer;
+}
+
+.findContainer__filters__select__arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 10%;
+    font-weight: 700;
+    font-size: large;
+}
+
+.findContainer__filters>p {
+    color: #339BA9;
+    font-weight: 500;
+    cursor: pointer;
+    margin-bottom: 0;
+}
+
+.findContainer__filters+hr {
+    border: 1px solid rgb(218, 218, 218);
+}
+
+.findContainer__eventCard__parent {
+    padding: 20px 0;
+}
+
+.findContainer__eventCard__parent__child {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 20px 0;
+    border-bottom: 2px solid rgb(218, 218, 218);
+    cursor: pointer;
+}
+
+.findContainer__eventCard__parent__child__image {
+    position: relative;
+}
+
+.findContainer__eventCard__parent__child__image__icon {
+    position: absolute;
+    background-color: rgb(236, 236, 236);
+    border-radius: 5px;
+    padding: 2px 8px;
+    display: flex;
+    align-items: center;
+    margin: 5px;
+    font-size: 13px;
+}
+
+.findContainer__eventCard__parent__child__image__icon>span {
+    margin-left: 5px;
+}
+
+.findContainer__eventCard__parent__child__content {
+    margin-left: 30px;
+    width: 70%;
+}
+
+.findContainer__eventCard__parent__child__content>p {
+    margin: 10px 0;
+    color: rgb(119, 119, 119);
+}
+
+.findContainer__eventCard__parent__child__content__info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.findContainer__eventCard__parent__child__content__info>div:nth-of-type(1) {
+    display: flex;
+    width: 90px;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.findContainer__eventCard__parent__child__content__info>div:nth-of-type(2) {
+    font-size: 20px;
+}
+
+.findContainer__eventCard__parent__child__content__info>div>p {
+    margin-bottom: 0;
+}
+
+.findContainer__eventCard__parent__child__content__info .star {
+    color: crimson;
+}

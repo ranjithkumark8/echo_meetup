@@ -1,0 +1,87 @@
+.eventInfoAttendes_container{
+    margin : 5% 40% 0% 15% ; 
+}
+
+.eventInfoAttendesCard{
+    text-align: center!important;
+    min-height: 100%;
+    min-width: 128px;
+    padding-left: 8px;
+    padding-right: 8px;
+    border: 1px solid rgba(46,62,72,.12);
+    border-radius: 8px;
+    box-sizing: border-box;
+    background: #fff;
+    position: static;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 30px;
+    line-height: 39px;
+    margin : 2% 2% ;
+    transition: height 2s, transform 2s;
+}
+.eventInfoAttendesCard:hover{
+    box-shadow: 0 0 4px 0 rgb(46 62 72 / 12%), 0 4px 12px 0 rgb(46 62 72 / 12%);
+    transform: translateY(-1px) ;
+}
+.eventInfoAttendes__header{
+    display: flex;
+    justify-content: space-evenly;
+}
+.eventInfoAttendesCard_Container{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-top: 5%;
+}
+.eventInfoAttendes__attendes_image{
+    height: 80px;
+    border-radius: 40px;
+    width: 80px;
+   
+}
+.inputSearch{
+    border : none;
+    padding : 10px;
+
+}
+input:focus{
+    border: white;
+    outline: none;
+}
+
+.ModalContainer{
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    line-height: 39px;
+    padding: 10px ;
+}
+.see_all_button{
+    color : #0098AB ;
+    font-size : 16px;
+    border : none;
+    background-color : whitesmoke
+}
+
+@media only screen and (max-width: 600px){
+    .eventInfoAttendes__header{
+       flex-wrap: wrap;
+        background-color: whitesmoke;
+        margin : 5% 55% 5% 0% ; 
+    }
+    Styles.eventInfoAttendes_container{
+        margin : 5% 10% 0% 5% ; 
+    }
+}
+@media only screen and (max-width: 992px) {
+    .see_all_button{
+       margin-top: 70px;
+       color : #0098AB ;
+    }
+    .eventInfoAttendes__header{
+        align-items: baseline;
+    }
+} 

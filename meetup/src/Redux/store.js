@@ -1,18 +1,18 @@
-// import { createStore, applyMiddleware, compose } from "redux";
-// import thunk from "redux-thunk";
-// import {rootReducer} from "./rootReducer"
 
+import {createStore,applyMiddleware,compose} from "redux";
+import thunk from "redux-thunk";
+import {rootReducer} from "./rootReducer"
 
-// let composeEnhancers = compose;
+let composeEnhancers = compose;
 
-// if (process.env.NODE_ENV !== "production") {
-//   composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__
-//     ? window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__({})
-//     : compose;
-// }
+if (process.env.NODE_ENV !== "production") {
 
-// const enhancer = composeEnhancers(applyMiddleware(thunk));
+  composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__
+    ? window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__({})
+    : compose;
 
-// const store = createStore(rootReducer, enhancer);
+}
+const enhancer = composeEnhancers(applyMiddleware(thunk));
+const store = createStore(rootReducer, enhancer);
 
-// export default store;
+export default store;
