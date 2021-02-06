@@ -5,11 +5,11 @@ import Styles from './LoginHeader.module.css'
 const LoginHeader = () => {
     return (
         <div className={Styles.header}>
-            <Link to="/"><img src="https://secure.meetupstatic.com/s/img/5455565085016210254/logo/svg/logo--script.svg" alt="logo" height="70px" width="100px" /></Link>
+            <Link to="/"><img className = {Styles.logo} src="https://secure.meetupstatic.com/s/img/5455565085016210254/logo/svg/logo--script.svg" alt="logo" height="70px" width="100px" /></Link>
             <div className={Styles.LoginHeader_right}>
                 <div className={Styles.loginHeader__startAGroup}>Start a new group</div>
                 <div>
-                    <select value="EN" name="language" style={{ border: "1px solid silver" }}>
+                    <select value="EN" name="language" className = {Styles.login__select}>
                         <option value="AF">Afrikaans</option>
                         <option value="SQ">Albanian</option>
                         <option value="AR">Arabic</option>

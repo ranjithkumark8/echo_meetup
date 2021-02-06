@@ -8,7 +8,7 @@ import { FaStar, FaFacebook, FaTwitter, FaLinkedin, FaCopy } from "react-icons/f
 import Modal from "react-modal"
 import { GrFormClose } from "react-icons/gr";
 import { IoIosVideocam } from "react-icons/io"
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { eventFetch, favoriteEventUpdate } from "../../../Redux/EventRedux/eventAction";
 
 const OutdoorEvents = ({ specificEvents }) => {
@@ -16,7 +16,7 @@ const OutdoorEvents = ({ specificEvents }) => {
     const [copied, setCopied] = React.useState(false)
     const history = useHistory();
     const dispatch = useDispatch()
-            
+    const isLoggedin = useSelector(state => state.authReducer.isLoggedin)     
     const handleClick =(id) => {
         history.push(`/event/${id}`)
     }
@@ -61,7 +61,7 @@ const OutdoorEvents = ({ specificEvents }) => {
         <div style={{ margin: "auto", width: "70%" }}>
             <div className={styles.heading}>
                 <h1>Explore the outdoors</h1>
-                <Link to={`/find?keyword=near_by`} className={styles.heading_allEvents}>See all</Link>
+                <Link to={`/find?keyword=Outdoors & Adventure`} className={styles.heading_allEvents}>See all</Link>
             </div>
             <Carousel responsive={responsive} removeArrowOnDeviceType={["tablet", "mobile"]} >
                 {specificEvents.map((item) => (
@@ -77,7 +77,7 @@ const OutdoorEvents = ({ specificEvents }) => {
                             {item.attendees.length > 0 ? <div className={styles.attendees_info_mem}>{item.attendees.length} going</div> : <div className={styles.attendees_info_mem}> </div>}
                             <div className={styles.attendees_info_icons}>
                                 <FiShare className={styles.attendees_info_icons_share} onClick={() => handleModel(item.id)} />
-                                {item.isStar === true ? <FaStar style={{ color: "crimson" }} className={styles.attendees_info_icons_star} onClick={() => handleSaved(item.id, item.isStar)}></FaStar> : <FiStar className={styles.attendees_info_icons_star} onClick={() => handleSaved(item.id, item.isStar)}></FiStar>}
+                                {item.isStar === true && isLoggedin ? <FaStar style={{ color: "crimson" }} className={styles.attendees_info_icons_star} onClick={() => handleSaved(item.id, item.isStar)}></FaStar> : <FiStar className={styles.attendees_info_icons_star} onClick={() => handleSaved(item.id, item.isStar)}></FiStar>}
                                 {/* {item.style ? true : false} */}
                             </div>
                         </div>

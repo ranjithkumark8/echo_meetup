@@ -1,11 +1,11 @@
 import React from "react"
 import { CommonTop } from "./CommonTop"
-import styles from "../../EventCreation.module.css"
+import styles from "./EventCreation.module.css"
 import { AppContext } from "../../AppContextProvider"
 import { Link } from "react-router-dom"
 
 const EventC2 = () => {
-    const { category, setCategory } = React.useContext(AppContext)
+    const { setCategory } = React.useContext(AppContext)
 
     const handleInput = (e) => {
         setCategory(e.target.value)

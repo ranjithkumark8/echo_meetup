@@ -1,11 +1,11 @@
 import React from "react"
 import { CommonTop } from "./CommonTop"
-import styles from "../../EventCreation.module.css"
+import styles from "./EventCreation.module.css"
 import { Link } from "react-router-dom"
 import { AppContext } from "../../AppContextProvider"
 
 const EventC3 = () => {
-    const { header, setHeader } = React.useContext(AppContext)
+    const { header, setHeader, subHeader, setSubHeader } = React.useContext(AppContext)
     // console.log(header)
     return (
 
@@ -22,6 +22,8 @@ const EventC3 = () => {
                     <br />creative! You can edit this later if you change your mind.</h4>
                 <h1><input style={{ width: "60%", height: "50px", textAlign: "center", fontSize: "20px" }} value={header} placeholder="Enter Group Name"
                     onChange={(e) => setHeader(e.target.value)} /></h1>
+                <input style={{ width: "60%", height: "50px", textAlign: "center", fontSize: "20px" }} value={subHeader} placeholder="Give Brief About Event"
+                    onChange={(e) => setSubHeader(e.target.value)} />
             </div>
             <div className={styles.eve1_button}>
                 <Link to="/start/description" ><button>Next</button></Link>

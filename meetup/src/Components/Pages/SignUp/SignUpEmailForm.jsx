@@ -64,7 +64,7 @@ const SignUpEmailForm = () => {
                 <button className={Styles.signup__continue_button}>Continue</button>
                 <p className={Styles.signup__para} style={{ color: "rgba(0,0,0,.87)", marginTop: "20px", borderBottom: "2px solid silver", paddingBottom: "20px" }}>When you "Continue", you agree to Meetup's Terms of Service. We<br /> will manage information about you as described in our Privacy<br></br> Policy, and Cookie Policy. </p>
             </form>
-            <p className={Styles.signup__para} style={{ textAlign: 'center', marginBottom: "50px" }} >Already a member? Log In .</p>
+            <p className={Styles.signup__already_member_text} style={{ }} >Already a member? Log In .</p>
         </div>
     )
 }

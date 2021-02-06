@@ -1,6 +1,7 @@
 import React from "react"
 import { useDispatch, useSelector } from "react-redux"
 import { eventFetch } from "../../../Redux/EventRedux/eventAction"
+import { AppContext } from "../../AppContextProvider"
 import { HealthEvents } from "./HealthPage"
 import { LearningEvents } from "./LearningEvents"
 import { NearbyEvents } from "./NearbyEvents"
@@ -8,13 +9,14 @@ import { NetworkEvents } from "./NetworkEvents"
 import { OutdoorEvents } from "./OutdoorEvents"
 import { SavedEvents } from "./SavedEvents"
 import { TechEvents } from "./TechEvents"
+import { YourEvents } from "./YourEvents"
 
 const EventPage = (props) => {
 
     // console.log(props.event)
     const dispatch = useDispatch()
 
-    
+    const { events } = React.useContext(AppContext)
     // const data = useSelector(state => state.eventReducer.eventData)
     // console.log(data)
     // console.log("props", props.event)
@@ -59,6 +61,17 @@ const EventPage = (props) => {
             // console.log(savedEvents.length, "events pages")
             return (
                 <SavedEvents specificEvents={savedEvents}/>
+            )
+        } else {
+            return null
+        }
+    } else if (props.event === "yourEvents") {
+        // console.log(savedEvents, "saved events data in event page")
+        if (events.length > 0) {
+            // console.log(savedEvents.length, "events pages")
+            return (
+                <YourEvents />
+                // <SavedEvents specificEvents={savedEvents}/>
             )
         } else {
             return null

@@ -31,7 +31,7 @@
     color: white;
 }
 .signup__single_div{
-    padding: 15px 20px;
+    padding: 15px 25px;
     border: 1px solid rgba(0,0,0,.26) !important;
     color: grey;
 }
@@ -49,3 +49,11 @@
     font-weight: 400;
     line-height: 1.45;
 }
+
+
+@media only screen and (max-width: 600px){
+    .signup__single_span{
+        margin-left: 40px;
+        margin-right: 40px;
+    }
+ }
