@@ -58,7 +58,7 @@ const EventInfoLikes = () => {
 
   return (
     <div className={Styles.eventInfo__Comments__container}>
-      <h2>Comments <span>({eventInfoData.comments.length})</span></h2>
+      <h2>Comments <span>({eventInfoData.comments?.length})</span></h2>
       <div>
         {
           eventInfoData.comments?.map(item => (

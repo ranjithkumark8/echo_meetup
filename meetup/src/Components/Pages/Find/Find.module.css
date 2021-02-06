@@ -24,6 +24,7 @@
     border-radius: 20px;
     cursor: pointer;
     appearance: none;
+    width: 120px;
 }
 
 .findContainer__filters__select option {
