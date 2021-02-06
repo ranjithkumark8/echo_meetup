@@ -13,7 +13,7 @@ const EventInfoLikes = () => {
   // const [likes, setLikes] = React.useState(0);
   // const [dislikes, setDislikes] = React.useState(0);
   // const [action, setAction] = React.useState(null);
-  const eventInfoData = useSelector(state => state.eventInfo.eventInfoData)
+  const eventInfoData = useSelector(state => state.eventInfo.eventInfoData) || []
   const [mainComment, setMainComment] = useState("");
   const loginDetails = useSelector(state => state.authReducer.loginDetails);
   const dispatch = useDispatch();
@@ -21,6 +21,7 @@ const EventInfoLikes = () => {
   const [comment, setComment] = useState("");
 
   // console.log(eventInfoData, comments)
+
 
 
 
@@ -58,7 +59,7 @@ const EventInfoLikes = () => {
 
   return (
     <div className={Styles.eventInfo__Comments__container}>
-      <h2>Comments <span>({eventInfoData.comments.length})</span></h2>
+      <h2>Comments <span>({eventInfoData?.comments?.length})</span></h2>
       <div>
         {
           eventInfoData.comments?.map(item => (
