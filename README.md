@@ -6,6 +6,26 @@ The platform enables users to browse the events on basis of interest and also th
 
 In this project , we have tried to make a perfect clone of meetup.com.
 
+# Steps to install the project:
+
+## Install basic Software:
+* Install NodeJS
+* Install VS Code
+* Install Git
+
+## Clone the following git repository inside any folder:
+
+* https://github.com/ranjithkumark8/echo_meetup
+
+##  Open the cloned git repo in VS Code and install the required dependencies.
+
+* #### Open a terminal and make sure you are in the working directory folder -> Inside meetup folder, run this command to install the required project dependencies .
+  * npm install   
+
+* #### Now, Run command -> npm start 
+
+* #### Now you can access the app at this URL: http://localhost:8000
+
 ## Technologies used
   
   * React
@@ -29,7 +49,7 @@ In this project , we have tried to make a perfect clone of meetup.com.
 ## How to use the product
 
 
- 1. In order to use the product , you can use this link -> 
+ 1. In order to use the product , do npm start in your console.
 
   ![Landing Page](https://github.com/ranjithkumark8/echo_meetup/blob/master/samples/Landing%20Page.png)
 
