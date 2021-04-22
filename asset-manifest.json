@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/meetup-clone/static/css/main.abda1b62.chunk.css",
+    "main.js": "/meetup-clone/static/js/main.a0132756.chunk.js",
+    "main.js.map": "/meetup-clone/static/js/main.a0132756.chunk.js.map",
+    "runtime-main.js": "/meetup-clone/static/js/runtime-main.94bf8e80.js",
+    "runtime-main.js.map": "/meetup-clone/static/js/runtime-main.94bf8e80.js.map",
+    "static/css/2.60751617.chunk.css": "/meetup-clone/static/css/2.60751617.chunk.css",
+    "static/js/2.9f288a54.chunk.js": "/meetup-clone/static/js/2.9f288a54.chunk.js",
+    "static/js/2.9f288a54.chunk.js.map": "/meetup-clone/static/js/2.9f288a54.chunk.js.map",
+    "index.html": "/meetup-clone/index.html",
+    "static/css/2.60751617.chunk.css.map": "/meetup-clone/static/css/2.60751617.chunk.css.map",
+    "static/css/main.abda1b62.chunk.css.map": "/meetup-clone/static/css/main.abda1b62.chunk.css.map",
+    "static/js/2.9f288a54.chunk.js.LICENSE.txt": "/meetup-clone/static/js/2.9f288a54.chunk.js.LICENSE.txt",
+    "static/media/styles.css": "/meetup-clone/static/media/revicons.e8746a62.woff"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.94bf8e80.js",
+    "static/css/2.60751617.chunk.css",
+    "static/js/2.9f288a54.chunk.js",
+    "static/css/main.abda1b62.chunk.css",
+    "static/js/main.a0132756.chunk.js"
+  ]
+}
