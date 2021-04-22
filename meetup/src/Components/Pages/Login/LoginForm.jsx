@@ -12,6 +12,7 @@ const init = {
     password: "",
     keepSigned: false
 }
+let count = false;
 const LoginForm = () => {
     const [loginData, setLoginData] = React.useState(init)
     const history = useHistory();
@@ -24,6 +25,8 @@ const LoginForm = () => {
         const { name, value, type, checked } = e.target;
         let val = type === "checkbox" ? checked : value
         setLoginData({ ...loginData, [name]: val })
+        setWrongCredentials(false);
+        count = false;
     }
 
     const handleSubmit = (e) => {
@@ -41,12 +44,19 @@ const LoginForm = () => {
         }
     }
     useEffect(() => {
-        document.title ="Login | Meetup"
+        document.title = "Login | Meetup"
     })
     useEffect(() => {
         if (Object.keys(loginDetails).length !== 0) {
             handleCheck()
+            count = false;
+        } else if (count) {
+            setWrongCredentials(true);
+            count = false;
+            console.log(count, wrongCredentials, 1)
         }
+        console.log(count, wrongCredentials, 2)
+        count = true;
     }, [loginDetails])
 
 
@@ -72,19 +82,19 @@ const LoginForm = () => {
                         <FaFacebookF style={{ color: 'white' }} />
                         <span className={Styles.login__single_span}>
                             Continue with Facebook
-                    </span>
+                        </span>
                     </div>
                     <div className={Styles.login__single_div}>
                         <FcGoogle />
                         <span className={Styles.login__single_span}>
                             Continue with Google
-                    </span>
+                        </span>
                     </div>
                     <div className={Styles.login__single_div}>
                         <DiApple style={{ color: "black" }} />
                         <span className={Styles.login__single_span}>
                             Continue with Apple
-                    </span>
+                        </span>
                     </div>
 
                 </div>
