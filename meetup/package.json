@@ -1,6 +1,6 @@
 {
   "name": "meetup",
-  "homepage": "https://ranjithkumark8.github.io/meetup-clone",
+  "homepage": "https://ranjithkumark8.github.io/echo_meetup",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -35,7 +35,7 @@
   },
   "scripts": {
     "predeploy": "npm run build",
-    "deploy": "gh-pages -b master -d build",
+    "deploy": "gh-pages -d build",
     "start": "set PORT=8000 || react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
