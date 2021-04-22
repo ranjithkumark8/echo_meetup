@@ -58,7 +58,7 @@ export const authReducer = (state = initData, {
                 ...state,
                 isLoading: false,
                 isError: false,
-                loginDetails: payload
+                loginDetails: payload || {}
             }
         }
         case GET_LOGIN_DETAILS_FAILURE: {
@@ -87,7 +87,8 @@ export const authReducer = (state = initData, {
         case LOGOUT: {
             return {
                 ...state,
-                isLoggedin: false
+                isLoggedin: false,
+                isError: false
             }
         }
         default:

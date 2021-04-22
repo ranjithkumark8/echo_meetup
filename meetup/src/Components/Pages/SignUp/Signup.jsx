@@ -8,9 +8,9 @@ import { SignUpEmailForm } from './SignUpEmailForm';
 
 
 const Signup = () => {
-    
+
     const responseGoogle = (response) => {
-        console.log(response)
+        // console.log(response)
     }
 
     useEffect(() => {

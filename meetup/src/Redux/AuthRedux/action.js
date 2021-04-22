@@ -36,7 +36,7 @@ export const postSignupDetailsFailure = () => {
 
 export const postSignupDetails = (payload) => dispatch => {
     dispatch(postSignupDetailsRequest());
-    return axios.post("https://meetup-project.herokuapp.com/credentials", payload)
+    return axios.post("https://meetup-clone-project.herokuapp.com/credentials", payload)
         .then(res => {
             dispatch(postSignupDetailsSuccess(res.data));
             return {
@@ -69,9 +69,9 @@ export const getLoginDetailsFailure = () => {
 
 export const getLoginDetails = (payload) => dispatch => {
     dispatch(getLoginDetailsRequest());
-    return axios.get("https://meetup-project.herokuapp.com/credentials?email=" + payload.email)
+    return axios.get("https://meetup-clone-project.herokuapp.com/credentials?email=" + payload.email)
         .then(res => {
-            console.log(res.data[0])
+            // console.log(res.data[0])
             dispatch(getLoginDetailsSuccess(res.data[0]));
             return {
                 success: true
@@ -125,6 +125,6 @@ export const logout = () => {
 
 // export const getUserDetails = () => dispatch => {
 //     dispatch(getUserDetailsRequest());
-//     return axios.get("https://meetup-project.herokuapp.com/credentials")
+//     return axios.get("https://meetup-clone-project.herokuapp.com/credentials")
 //         .then(res => dispatch(getUserDetailsSuccess(res.data)))
 // }

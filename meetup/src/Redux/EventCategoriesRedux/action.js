@@ -26,7 +26,7 @@ export const getEventCategoriesFailure = () => {
 
 export const getEventCategories = () => dispatch => {
     dispatch(getEventCategoriesRequest());
-    return axios.get("https://meetup-project.herokuapp.com/event_category")
+    return axios.get("https://meetup-clone-project.herokuapp.com/event_category")
         .then(res => dispatch(getEventCategoriesSuccess(res.data)))
         .catch(error => dispatch(getEventCategoriesFailure(error)));
 }

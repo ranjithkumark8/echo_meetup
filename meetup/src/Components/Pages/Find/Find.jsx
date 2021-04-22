@@ -12,7 +12,7 @@ import { EventCard } from "./EventCard";
 export const Find = () => {
     const location = useLocation();
     let params = new URLSearchParams(location.search);
-    console.log(params.get("keyword"))
+    //.log(params.get("keyword"))
     const category = params.get("keyword");
     const dateRange = params.get("dateRange");
     const eventType = params.get("eventType");
@@ -20,15 +20,15 @@ export const Find = () => {
     const [url, setUrl] = useState(location.pathname + location.search);
     const isLoggedin = useSelector(state => state.authReducer.isLoggedin);
     const dispatch = useDispatch();
-    console.log(location.search, params, dateRange, eventType)
-    // console.log(location, params)
+    //.log(location.search, params, dateRange, eventType)
+    // //.log(location, params)
 
     const temp = useSelector(state => state.eventReducer.eventData)
     const eventData = useSelector(state => state.eventReducer.eventData).filter(item => {
-        console.log(item.category.toLowerCase().includes(category), category)
+        //.log(item.category.toLowerCase().includes(category), category)
         return item.category.toLowerCase().includes(category.toLowerCase());
     });
-    console.log(eventData, temp)
+    //.log(eventData, temp)
     const [filteredData, setFilteredData] = useState(eventData);
     let newData = [];
 
@@ -43,7 +43,7 @@ export const Find = () => {
             history.push(`/find${location.search}&${name}=${value}`);
         }
         setUrl(location.pathname + location.search)
-        // console.log(dateRange, eventType, location.search)
+        // //.log(dateRange, eventType, location.search)
     }
 
 
@@ -103,9 +103,9 @@ export const Find = () => {
 
     useEffect(() => {
         handleFilterData();
-        console.log(url)
+        //.log(url)
     }, [url])
-    console.log(url)
+    //.log(url)
 
     useEffect(() => {
         window.scrollTo(0, 0)
