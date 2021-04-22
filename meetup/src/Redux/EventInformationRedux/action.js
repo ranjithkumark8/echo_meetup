@@ -66,7 +66,7 @@ const putAttendeeData = (id, attendees) => dispatch => {
         .then(res => {
             dispatch(eventAttendeePutSuccess())
             dispatch(getEventInfoData(id))
-            console.log(res)
+            //.log(res)
         })
         .catch(err => {
             dispatch(eventAttendeePutFailure(err))
@@ -80,7 +80,7 @@ const putCommentsData = (id, comments) => dispatch => {
         .then(res => {
             dispatch(eventCommentsPutSuccess())
             dispatch(getEventInfoData(id))
-            console.log(res)
+            //.log(res)
         })
         .catch(err => {
             dispatch(eventCommentsPutFailure(err))
@@ -96,7 +96,7 @@ const getEventInfoData = (id) => (dispatch) => {
         })
         .catch(err => {
             dispatch(getEventInfoFailure(err))
-            console.log(err)
+            //.log(err)
         })
 }
 export {

@@ -53,9 +53,9 @@ const LoginForm = () => {
         } else if (count) {
             setWrongCredentials(true);
             count = false;
-            console.log(count, wrongCredentials, 1)
+            // console.log(count, wrongCredentials, 1)
         }
-        console.log(count, wrongCredentials, 2)
+        // console.log(count, wrongCredentials, 2)
         count = true;
     }, [loginDetails])
 

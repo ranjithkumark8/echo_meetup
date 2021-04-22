@@ -21,7 +21,7 @@ const AddEventLikes = () => {
             name,
             comment: comment
         }
-        console.log(eventInfoData.comments)
+        //.log(eventInfoData.comments)
         let comments = [particularComment, ...eventInfoData.comments]
 
         dispatch(putCommentsData(eventInfoData.id, comments))

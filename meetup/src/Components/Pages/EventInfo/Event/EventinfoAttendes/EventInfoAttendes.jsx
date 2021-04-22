@@ -12,13 +12,13 @@ const EventInfoAttendes = ({ attendees, header }) => {
     const eventInfoData = useSelector(state => state.eventInfo.eventInfoData)
 
     if (eventInfoData !== undefined) {
-        console.log(eventInfoData, attendees)
+        //.log(eventInfoData, attendees)
     }
 
     return (
-        <div className = {Styles.eventInfoAttendes_container}>
-            <div className = {Styles.eventInfoAttendes__header}>
-                <h3 style = {{fontSize : "20px", marginTop : "20px",fontWeight : 'bold'}}>Attendees ({eventInfoData.attendees ? eventInfoData.attendees.length : 0})</h3>
+        <div className={Styles.eventInfoAttendes_container}>
+            <div className={Styles.eventInfoAttendes__header}>
+                <h3 style={{ fontSize: "20px", marginTop: "20px", fontWeight: 'bold' }}>Attendees ({eventInfoData.attendees ? eventInfoData.attendees.length : 0})</h3>
                 <Button onClick={() => setModalVisible(true)}>See all</Button>
             </div>
             <div className={Styles.eventInfoAttendesCard_Container}>

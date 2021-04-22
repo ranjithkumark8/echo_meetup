@@ -15,7 +15,7 @@ const EventNavbar = ({ id, attendees, img, header, date }) => {
     const [isGoing, setIsGoing] = React.useContext(EventInfoContext)
     const dispatch = useDispatch();
     const loginDetails = useSelector(state => state.authReducer.loginDetails);
-    console.log(attendees, id)
+    //.log(attendees, id)
     const handleClick = () => {
         setModalVisible(true)
         isGoing === true ? setIsGoing(false) : setIsGoing(true)
@@ -27,7 +27,7 @@ const EventNavbar = ({ id, attendees, img, header, date }) => {
                 name,
                 img: "https://image.shutterstock.com/z/stock-photo-side-view-of-young-ethnic-man-with-earphones-and-short-hair-using-smartphone-while-leaning-on-1687201528.jpg"
             }
-            attendees = [...attendees,attendeeData]
+            attendees = [...attendees, attendeeData]
             dispatch(putAttendeeData(id, attendees))
         }
         else {

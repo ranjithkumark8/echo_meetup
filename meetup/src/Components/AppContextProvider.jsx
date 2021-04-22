@@ -2,7 +2,7 @@ import React from "react"
 import axios from "axios"
 export const AppContext = React.createContext()
 
-export const AppContextProvider = ({children}) => {
+export const AppContextProvider = ({ children }) => {
 
     const [category, setCategory] = React.useState("")
     const [header, setHeader] = React.useState("")
@@ -22,11 +22,11 @@ export const AppContextProvider = ({children}) => {
             attendees: [],
             comments: [],
             isStar: false,
-            isYourEvent:true
+            isYourEvent: true
         }
         // setEvents([...events, ])
         if (category !== "" && header !== "" && subHeader !== "") {
-            console.log(payload)
+            // console.log(payload)
             setEvents([...events, payload])
             // axios.post("https://meetup-project.herokuapp.com/events",
             //     payload
@@ -36,6 +36,6 @@ export const AppContextProvider = ({children}) => {
         }
     }
 
-    const value = {category , setCategory , header , setHeader, createEvent, subHeader, setSubHeader, events} 
+    const value = { category, setCategory, header, setHeader, createEvent, subHeader, setSubHeader, events }
     return <AppContext.Provider value={value} >{children}</AppContext.Provider>
 }
