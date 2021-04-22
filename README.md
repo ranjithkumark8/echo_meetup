@@ -51,23 +51,23 @@ In this project , we have tried to make a perfect clone of meetup.com.
 
  1. In order to use the product , do npm start in your console.
 
-  ![Landing Page](https://github.com/ranjithkumark8/echo_meetup/blob/master/samples/Landing%20Page.png)
+  ![Landing Page](https://github.com/ranjithkumark8/echo_meetup/blob/main/samples/Landing%20Page.png)
 
  2. Here you can see our landing page , If you are using this product for the first time , you are a new user and you can sign up by clicking on the sign up link.
 
-  ![Sign up](https://github.com/ranjithkumark8/echo_meetup/blob/master/samples/Sign%20Up.png)
+  ![Sign up](https://github.com/ranjithkumark8/echo_meetup/blob/main/samples/Sign%20Up.png)
 
  3. Here you can see a form, you need to fill your name, email address and password. Now, click on continue button.
 
-  ![Login](https://github.com/ranjithkumark8/echo_meetup/blob/master/samples/Login%20Page.jpg)
+  ![Login](https://github.com/ranjithkumark8/echo_meetup/blob/main/samples/Login%20Page.jpg)
  
  4. Now, you need to login here with the details you have provided in sign up page.
 
-   ![main Page](https://github.com/ranjithkumark8/echo_meetup/blob/master/samples/Main%20Page.png)
+   ![main Page](https://github.com/ranjithkumark8/echo_meetup/blob/main/samples/Main%20Page.png)
 
 5. You can see main page. Here you can choose any event on the basis of your intrest.For more information about particular event you can click on that event.
   
-   ![event page](https://github.com/ranjithkumark8/echo_meetup/blob/master/samples/Event%20Detail%20Page.png)
+   ![event page](https://github.com/ranjithkumark8/echo_meetup/blob/main/samples/Event%20Detail%20Page.png)
  
  6.Now, you can attend a particular event by clicking on the Attend Online button in the bottom.If you dont want to go you can change it by clicking it again.
 
