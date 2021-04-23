@@ -48,6 +48,8 @@ In this project , we have tried to make a perfect clone of meetup.com.
 
 ## How to use the product
 
+  **Use the production link -> https://meetup-project.netlify.app/**   Or follow the given steps :
+
 
  1. In order to use the product , do npm start in your console.
 
