@@ -82,7 +82,7 @@ const Profile = () => {
               alt=''
             />
             <h3 style={{ padding: '10px' }}>
-              Banglore Shopping Meetup Group <br />{' '}
+              Bangalore Shopping Meetup Group <br />{' '}
               <p
                 style={{
                   color: '#1f24cc',

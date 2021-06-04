@@ -1054,7 +1054,7 @@ const LandingPage = () => {
                   alignItems: 'center',
                 }}
               >
-                Banglore , In
+                Bangalore , In
               </div>
             </div>
             <div>
